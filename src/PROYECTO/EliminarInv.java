@@ -55,7 +55,7 @@ public class EliminarInv extends javax.swing.JFrame {
         lblCobro.setForeground(new java.awt.Color(204, 255, 255));
         lblCobro.setText("Eliminar Inventario ");
         jPanel1.add(lblCobro);
-        lblCobro.setBounds(70, 20, 470, 50);
+        lblCobro.setBounds(70, 30, 470, 50);
 
         casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/home_48.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");
@@ -139,9 +139,9 @@ public class EliminarInv extends javax.swing.JFrame {
             }
         });
         jPanel1.add(FONDO);
-        FONDO.setBounds(0, 0, 600, 470);
+        FONDO.setBounds(0, 0, 600, 480);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 11, 602, 470));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 600, 480));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

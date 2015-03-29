@@ -256,15 +256,20 @@ Cerrar.setBorderPainted(false);
 
         if ((tfieldUsuario.getText().equals("admin"))&& pwrContraseña.getText().equals("admin")){
 
-            Principal p=new Principal();
+            PrincipalAdmin pa=new PrincipalAdmin();
 
-            p.setResizable(false);
-            p.setLocationRelativeTo(null);
-            p.setVisible(true);
+            pa.setResizable(false);
+            pa.setLocationRelativeTo(null);
+            pa.setVisible(true);
             dispose();
         }
-        else {
+        if ((tfieldUsuario.getText().equals("user"))&& pwrContraseña.getText().equals("user")) {
+            PrincipalUser pu=new PrincipalUser();
 
+            pu.setResizable(false);
+            pu.setLocationRelativeTo(null);
+            pu.setVisible(true);
+            dispose();
         }
 
     }//GEN-LAST:event_btnEntrarActionPerformed
