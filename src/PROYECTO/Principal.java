@@ -307,6 +307,11 @@ public class Principal extends javax.swing.JFrame {
         btnAcerca.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAcerca.setFocusPainted(false);
         btnAcerca.setFocusable(false);
+        btnAcerca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAcercaActionPerformed(evt);
+            }
+        });
         jPanel2.add(btnAcerca, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 260, 70));
 
         lblOpciones.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
@@ -787,6 +792,16 @@ public class Principal extends javax.swing.JFrame {
     private void jPanel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1MouseEntered
+
+    private void btnAcercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcercaActionPerformed
+       AcercaDe ad=new AcercaDe();
+
+        ad.setResizable(false);
+        ad.setLocationRelativeTo(null);
+        ad.setVisible(true);
+         
+        
+    }//GEN-LAST:event_btnAcercaActionPerformed
 
     /**
      * @param args the command line arguments
