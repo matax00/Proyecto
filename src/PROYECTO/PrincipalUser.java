@@ -9,6 +9,7 @@ import java.awt.Image;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -43,7 +44,7 @@ public class PrincipalUser extends javax.swing.JFrame {
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(false);
         btnAnalisis.setBorderPainted(false);
-        btnServicos.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
         btnOpciones.setBorderPainted(false);
         txtCodRecibo.setVisible(false);
         lblCodRecibo.setVisible(false);
@@ -122,8 +123,9 @@ public class PrincipalUser extends javax.swing.JFrame {
         btnAyuda = new javax.swing.JButton();
         btnCerrarSesion = new javax.swing.JButton();
         btnEstatus = new javax.swing.JButton();
-        btnServicos = new javax.swing.JButton();
+        btnServicios = new javax.swing.JButton();
         Nombre = new javax.swing.JLabel();
+        Usuario = new javax.swing.JLabel();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -281,7 +283,7 @@ public class PrincipalUser extends javax.swing.JFrame {
                 btnPresupuestoActionPerformed(evt);
             }
         });
-        jPanel2.add(btnPresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, 120, 150));
+        jPanel2.add(btnPresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, 130, 130));
 
         txtCedula.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtCedula.setToolTipText("");
@@ -326,8 +328,10 @@ public class PrincipalUser extends javax.swing.JFrame {
         jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, 60, 60));
 
         btnAcerca.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnAcerca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/help-hint.png"))); // NOI18N
-        btnAcerca.setText("Acerca de");
+        btnAcerca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Acercade.png"))); // NOI18N
+        btnAcerca.setToolTipText("Acerca de");
+        btnAcerca.setBorderPainted(false);
+        btnAcerca.setContentAreaFilled(false);
         btnAcerca.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAcerca.setFocusPainted(false);
         btnAcerca.setFocusable(false);
@@ -336,7 +340,7 @@ public class PrincipalUser extends javax.swing.JFrame {
                 btnAcercaActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAcerca, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 380, 260, 70));
+        jPanel2.add(btnAcerca, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 360, 140, 120));
 
         lblOpciones.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
         lblOpciones.setForeground(new java.awt.Color(255, 255, 255));
@@ -578,27 +582,33 @@ public class PrincipalUser extends javax.swing.JFrame {
         jPanel1.add(jPanel2);
         jPanel2.setBounds(150, 40, 640, 560);
 
-        btnServicos.setForeground(new java.awt.Color(153, 255, 255));
-        btnServicos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/servicios.png"))); // NOI18N
-        btnServicos.setToolTipText("Servicios");
-        btnServicos.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true));
-        btnServicos.setContentAreaFilled(false);
-        btnServicos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnServicos.setFocusPainted(false);
-        btnServicos.setFocusable(false);
-        btnServicos.addActionListener(new java.awt.event.ActionListener() {
+        btnServicios.setForeground(new java.awt.Color(153, 255, 255));
+        btnServicios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/servicios.png"))); // NOI18N
+        btnServicios.setToolTipText("Servicios");
+        btnServicios.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true));
+        btnServicios.setContentAreaFilled(false);
+        btnServicios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnServicios.setFocusPainted(false);
+        btnServicios.setFocusable(false);
+        btnServicios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnServicosActionPerformed(evt);
+                btnServiciosActionPerformed(evt);
             }
         });
-        jPanel1.add(btnServicos);
-        btnServicos.setBounds(10, 180, 140, 140);
+        jPanel1.add(btnServicios);
+        btnServicios.setBounds(10, 180, 140, 140);
 
         Nombre.setFont(new java.awt.Font("Thames", 3, 18)); // NOI18N
         Nombre.setForeground(new java.awt.Color(255, 255, 255));
         Nombre.setText("Control Brothernologic V 1.3");
         jPanel1.add(Nombre);
         Nombre.setBounds(10, 10, 230, 20);
+
+        Usuario.setFont(new java.awt.Font("Thames", 1, 14)); // NOI18N
+        Usuario.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario.setText("Usuario");
+        jPanel1.add(Usuario);
+        Usuario.setBounds(660, 20, 60, 20);
 
         Fondo.setBackground(new java.awt.Color(204, 204, 204));
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -670,7 +680,7 @@ public class PrincipalUser extends javax.swing.JFrame {
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(true);
         btnAnalisis.setBorderPainted(false);
-        btnServicos.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
         btnOpciones.setBorderPainted(false);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
@@ -712,7 +722,7 @@ public class PrincipalUser extends javax.swing.JFrame {
         Warning.setVisible(true);
         btnArchivo.setBorderPainted(false);
         btnAnalisis.setBorderPainted(true);
-        btnServicos.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
         btnOpciones.setBorderPainted(false);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
@@ -756,7 +766,7 @@ public class PrincipalUser extends javax.swing.JFrame {
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(false);
         btnAnalisis.setBorderPainted(false);
-        btnServicos.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
         btnOpciones.setBorderPainted(true);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
@@ -848,7 +858,7 @@ public class PrincipalUser extends javax.swing.JFrame {
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(false);
         btnAnalisis.setBorderPainted(false);
-        btnServicos.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
         btnOpciones.setBorderPainted(false); 
         Bandera.setVisible(true);
         Brothernologic.setVisible(true);
@@ -898,7 +908,7 @@ public class PrincipalUser extends javax.swing.JFrame {
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(false);
         btnAnalisis.setBorderPainted(false);
-        btnServicos.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
         btnOpciones.setBorderPainted(false); 
         Bandera.setVisible(true);
         Brothernologic.setVisible(true);
@@ -916,15 +926,28 @@ public class PrincipalUser extends javax.swing.JFrame {
     }//GEN-LAST:event_btnOKActionPerformed
 
     private void btnImpresoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImpresoraActionPerformed
-
+        Impresora im=new Impresora();
+                
+        im.setResizable(false);
+        im.setLocationRelativeTo(null);
+        im.setVisible(true);
     }//GEN-LAST:event_btnImpresoraActionPerformed
 
     private void btnIngresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresosActionPerformed
-
+        Ingresos in=new Ingresos();
+                
+        in.setResizable(false);
+        in.setLocationRelativeTo(null);
+        in.setVisible(true);
        
     }//GEN-LAST:event_btnIngresosActionPerformed
 
     private void btnEgresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEgresosActionPerformed
+       Egresos egr=new Egresos();
+                
+        egr.setResizable(false);
+        egr.setLocationRelativeTo(null);
+        egr.setVisible(true);
        
     }//GEN-LAST:event_btnEgresosActionPerformed
 
@@ -943,7 +966,7 @@ public class PrincipalUser extends javax.swing.JFrame {
         insu.setVisible(true);
     }//GEN-LAST:event_btnInsumosActionPerformed
 
-    private void btnServicosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnServicosActionPerformed
+    private void btnServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnServiciosActionPerformed
         lblCedula.setVisible(false);
         txtCedula.setVisible(false);
         btnBuscar.setVisible(false);
@@ -966,7 +989,7 @@ public class PrincipalUser extends javax.swing.JFrame {
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(false);
         btnAnalisis.setBorderPainted(false);
-        btnServicos.setBorderPainted(true);
+        btnServicios.setBorderPainted(true);
         btnOpciones.setBorderPainted(false);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
@@ -981,10 +1004,14 @@ public class PrincipalUser extends javax.swing.JFrame {
          btnCerrarSesion.setVisible(false);
         btnAyuda.setVisible(false);
         btnEstatus.setVisible(false);
-    }//GEN-LAST:event_btnServicosActionPerformed
+    }//GEN-LAST:event_btnServiciosActionPerformed
 
     private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
-
+try {
+              Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler " + "src\\MANUAL\\MANUAL.pdf");
+    } catch (Exception e){
+      JOptionPane.showMessageDialog(rootPane, "Error al Abrir el Archivo", "ERROR", JOptionPane.ERROR_MESSAGE);  
+    }
         
     }//GEN-LAST:event_btnAyudaActionPerformed
 
@@ -1065,7 +1092,7 @@ public class PrincipalUser extends javax.swing.JFrame {
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(false);
         btnAnalisis.setBorderPainted(false);
-        btnServicos.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
         btnOpciones.setBorderPainted(false); 
         Bandera.setVisible(true);
         Brothernologic.setVisible(true);
@@ -1083,7 +1110,7 @@ public class PrincipalUser extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAceptarCodActionPerformed
 
     private void btnIrFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrFacturaActionPerformed
-        Cobrar c=new Cobrar();
+        Factura c=new Factura();
         c.setResizable(false);
         c.setLocationRelativeTo(null);
         c.setVisible(true);
@@ -1110,7 +1137,7 @@ public class PrincipalUser extends javax.swing.JFrame {
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(false);
         btnAnalisis.setBorderPainted(false);
-        btnServicos.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
         btnOpciones.setBorderPainted(false); 
         Bandera.setVisible(true);
         Brothernologic.setVisible(true);
@@ -1137,7 +1164,11 @@ Inicio i=new Inicio();
     }//GEN-LAST:event_btnCerrarSesionActionPerformed
 
     private void btnEstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstatusActionPerformed
-        // TODO add your handling code here:
+      Estatus es=new Estatus();
+
+        es.setResizable(false);
+        es.setLocationRelativeTo(null);
+        es.setVisible(true);  // TODO add your handling code here:
     }//GEN-LAST:event_btnEstatusActionPerformed
 
     /**
@@ -1182,6 +1213,7 @@ Inicio i=new Inicio();
     private javax.swing.JLabel Fondo;
     private javax.swing.JButton Minimizar;
     private javax.swing.JLabel Nombre;
+    private javax.swing.JLabel Usuario;
     private javax.swing.JLabel Warning;
     private javax.swing.JButton btnAceptarCod;
     private javax.swing.JButton btnAcerca;
@@ -1203,7 +1235,7 @@ Inicio i=new Inicio();
     private javax.swing.JButton btnOK;
     private javax.swing.JButton btnOpciones;
     private javax.swing.JButton btnPresupuesto;
-    private javax.swing.JButton btnServicos;
+    private javax.swing.JButton btnServicios;
     private javax.swing.JButton btnTelefono;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

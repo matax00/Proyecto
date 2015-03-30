@@ -14,22 +14,19 @@ import java.awt.Toolkit;
  *
  * @author FerSo
  */
-public class ConfirmarSalir extends javax.swing.JFrame {
+public class Factura extends javax.swing.JFrame {
 
     /**
-     * Creates new form ConfirmarSalir
+     * Creates new form Cobrar
      */
-    public ConfirmarSalir() {
+    public Factura() {
         setUndecorated(true);
         initComponents();
-        
-        
     }
+int x,y;
 
-    int x,y;
-    
-       
-    @Override
+
+ @Override
    public Image getIconImage() {
         Image imagen = Toolkit.getDefaultToolkit().
                 getImage(ClassLoader.getSystemResource("iconos/icono.png"));
@@ -37,7 +34,6 @@ public class ConfirmarSalir extends javax.swing.JFrame {
 
         return imagen;
     }
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -48,17 +44,15 @@ public class ConfirmarSalir extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        cerrar = new javax.swing.JButton();
-        lblTituloSalir = new javax.swing.JLabel();
-        btnSi = new javax.swing.JButton();
-        btnNo = new javax.swing.JButton();
+        lblCobro = new javax.swing.JLabel();
+        casa = new javax.swing.JButton();
         FONDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -68,54 +62,26 @@ public class ConfirmarSalir extends javax.swing.JFrame {
         });
         jPanel1.setLayout(null);
 
-        cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Cerrar.png"))); // NOI18N
-        cerrar.setToolTipText("Cerrar");
-        cerrar.setBorderPainted(false);
-        cerrar.setContentAreaFilled(false);
-        cerrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        cerrar.setFocusPainted(false);
-        cerrar.setFocusable(false);
-        cerrar.addActionListener(new java.awt.event.ActionListener() {
+        lblCobro.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
+        lblCobro.setForeground(new java.awt.Color(204, 255, 255));
+        lblCobro.setText("Facturación");
+        jPanel1.add(lblCobro);
+        lblCobro.setBounds(10, 10, 430, 50);
+
+        casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inicio.png"))); // NOI18N
+        casa.setToolTipText("Ir Atras");
+        casa.setBorderPainted(false);
+        casa.setContentAreaFilled(false);
+        casa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        casa.setFocusPainted(false);
+        casa.setFocusable(false);
+        casa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cerrarActionPerformed(evt);
+                casaActionPerformed(evt);
             }
         });
-        jPanel1.add(cerrar);
-        cerrar.setBounds(230, 0, 30, 30);
-
-        lblTituloSalir.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
-        lblTituloSalir.setForeground(new java.awt.Color(204, 255, 255));
-        lblTituloSalir.setText("¿Desea Salir?");
-        jPanel1.add(lblTituloSalir);
-        lblTituloSalir.setBounds(30, 30, 230, 50);
-
-        btnSi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ok.png"))); // NOI18N
-        btnSi.setBorderPainted(false);
-        btnSi.setContentAreaFilled(false);
-        btnSi.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnSi.setFocusPainted(false);
-        btnSi.setFocusable(false);
-        btnSi.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSiActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnSi);
-        btnSi.setBounds(30, 80, 90, 70);
-
-        btnNo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
-        btnNo.setBorderPainted(false);
-        btnNo.setContentAreaFilled(false);
-        btnNo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnNo.setFocusPainted(false);
-        btnNo.setFocusable(false);
-        btnNo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNoActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnNo);
-        btnNo.setBounds(140, 80, 110, 70);
+        jPanel1.add(casa);
+        casa.setBounds(600, 480, 80, 90);
 
         FONDO.setBackground(new java.awt.Color(204, 204, 204));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -136,16 +102,16 @@ public class ConfirmarSalir extends javax.swing.JFrame {
             }
         });
         jPanel1.add(FONDO);
-        FONDO.setBounds(0, 0, 270, 170);
+        FONDO.setBounds(0, 0, 700, 580);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 270, 170));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cerrarActionPerformed
+    private void casaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casaActionPerformed
         dispose();
-    }//GEN-LAST:event_cerrarActionPerformed
+    }//GEN-LAST:event_casaActionPerformed
 
     private void FONDOMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FONDOMouseDragged
 
@@ -167,15 +133,6 @@ public class ConfirmarSalir extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1MouseEntered
 
-    private void btnSiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiActionPerformed
-      
-        System.exit(0);
-    }//GEN-LAST:event_btnSiActionPerformed
-
-    private void btnNoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNoActionPerformed
-      dispose();
-    }//GEN-LAST:event_btnNoActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -193,29 +150,29 @@ public class ConfirmarSalir extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ConfirmarSalir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Factura.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ConfirmarSalir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Factura.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ConfirmarSalir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Factura.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ConfirmarSalir.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Factura.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run(){            new ConfirmarSalir().setVisible(true);
+            public void run() {
+                new Factura().setVisible(true);
             }
         });
-                }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FONDO;
-    private javax.swing.JButton btnNo;
-    private javax.swing.JButton btnSi;
-    private javax.swing.JButton cerrar;
+    private javax.swing.JButton casa;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblTituloSalir;
+    private javax.swing.JLabel lblCobro;
     // End of variables declaration//GEN-END:variables
 }

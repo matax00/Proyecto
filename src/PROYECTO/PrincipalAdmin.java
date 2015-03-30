@@ -9,6 +9,7 @@ import java.awt.Image;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Toolkit;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -24,7 +25,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         initComponents();
         lblCedula.setVisible(false);
         txtCedula.setVisible(false);
-        btnBuscar.setVisible(false);
+        btnBuscarCliente.setVisible(false);
         btnAgregar.setVisible(false);
         lblServicio.setVisible(false);
         btnComputadora.setVisible(false);
@@ -33,19 +34,45 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnAcerca.setVisible(false);
         lblOpciones.setVisible(false);
         lblArchivo.setVisible(false);
-        lblReporte.setVisible(false);
+        lblAnalisis.setVisible(false);
         lblNombre.setVisible(false);
-        btnOK.setVisible(false);
-        btnCobrar.setVisible(false);
+        btnOKCliente.setVisible(false);
+        
         btnInsumos.setVisible(false);
         btnNoReparados.setVisible(false);
-        btnInventario.setVisible(false);
-        btnContabilidad.setVisible(false);
+        btnIngresos.setVisible(false);
+        btnEgresos.setVisible(false);
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(false);
-        btnReporte.setBorderPainted(false);
-        btnOtro.setBorderPainted(false);
+        btnAnalisis.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
+        btnImpresora.setVisible(false);
         btnOpciones.setBorderPainted(false);
+        txtCodRecibo.setVisible(false);
+        lblCodRecibo.setVisible(false);
+        btnIrFactura.setVisible(false);
+        btnAceptarCod.setVisible(false);
+        lblConsultaCliente.setVisible(false);
+        lblConsultaRecibo.setVisible(false);
+        btnBuscarRecibo.setVisible(false);
+        lblConsultaCliente.setVisible(false);
+        lblConsultaRecibo.setVisible(false);
+        lblEstadoRecibo.setVisible(false);
+        btnCerrarSesion.setVisible(false);
+        btnAyuda.setVisible(false);
+        btnEstatus.setVisible(false);
+        btnReporte.setBorderPainted(false);
+        lblReporte.setVisible(false);
+        btnContabilidad.setVisible(false);
+        btnInventario.setVisible(false);
+        lblConsultaUsuario.setVisible(false);
+        lblCedulaUsuario.setVisible(false);
+        lblNombreUsuario.setVisible(false);
+        txtCedulaUsuario.setVisible(false);
+        btnOKUsuario.setVisible(false);
+        btnAgregarUsuario.setVisible(false);
+        btnBuscarUsuario.setVisible(false);
+        btnMantenimiento.setVisible(false);
         
     }
 
@@ -75,32 +102,54 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnReporte = new javax.swing.JButton();
         btnOpciones = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        btnMantenimiento = new javax.swing.JButton();
         lblServicio = new javax.swing.JLabel();
         btnComputadora = new javax.swing.JButton();
         btnTelefono = new javax.swing.JButton();
         btnPresupuesto = new javax.swing.JButton();
-        txtCedula = new javax.swing.JTextField();
-        lblCedula = new javax.swing.JLabel();
-        btnBuscar = new javax.swing.JButton();
-        btnAgregar = new javax.swing.JButton();
-        btnAcerca = new javax.swing.JButton();
         lblOpciones = new javax.swing.JLabel();
         lblReporte = new javax.swing.JLabel();
-        lblArchivo = new javax.swing.JLabel();
-        lblNombre = new javax.swing.JLabel();
-        btnOK = new javax.swing.JButton();
-        btnCobrar = new javax.swing.JButton();
         btnInventario = new javax.swing.JButton();
         btnContabilidad = new javax.swing.JButton();
         Warning = new javax.swing.JLabel();
         btnNoReparados = new javax.swing.JButton();
         btnInsumos = new javax.swing.JButton();
+        lblConsultaRecibo = new javax.swing.JLabel();
+        lblEstadoRecibo = new javax.swing.JLabel();
+        btnAceptarCod = new javax.swing.JButton();
+        lblArchivo = new javax.swing.JLabel();
+        btnOKCliente = new javax.swing.JButton();
+        btnBuscarCliente = new javax.swing.JButton();
+        btnBuscarRecibo = new javax.swing.JButton();
+        lblCodRecibo = new javax.swing.JLabel();
+        txtCodRecibo = new javax.swing.JTextField();
+        btnIrFactura = new javax.swing.JButton();
+        btnAgregar = new javax.swing.JButton();
+        lblCedula = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
+        txtCedula = new javax.swing.JTextField();
+        lblConsultaCliente = new javax.swing.JLabel();
+        lblAnalisis = new javax.swing.JLabel();
+        btnAyuda = new javax.swing.JButton();
+        btnEstatus = new javax.swing.JButton();
+        btnIngresos = new javax.swing.JButton();
+        btnEgresos = new javax.swing.JButton();
+        btnImpresora = new javax.swing.JButton();
+        btnAcerca = new javax.swing.JButton();
+        btnCerrarSesion = new javax.swing.JButton();
+        lblCedulaUsuario = new javax.swing.JLabel();
+        btnAgregarUsuario = new javax.swing.JButton();
+        txtCedulaUsuario = new javax.swing.JTextField();
+        lblNombreUsuario = new javax.swing.JLabel();
+        lblConsultaUsuario = new javax.swing.JLabel();
+        btnOKUsuario = new javax.swing.JButton();
         Brothernologic = new javax.swing.JLabel();
         Bandera = new javax.swing.JLabel();
-        btnOtro = new javax.swing.JButton();
+        btnBuscarUsuario = new javax.swing.JButton();
+        btnAnalisis = new javax.swing.JButton();
         Nombre = new javax.swing.JLabel();
-        btnCerrarSesion = new javax.swing.JButton();
-        btnOtro1 = new javax.swing.JButton();
+        Administrador = new javax.swing.JLabel();
+        btnServicios = new javax.swing.JButton();
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -213,10 +262,25 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         jPanel2.setOpaque(false);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnMantenimiento.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnMantenimiento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/mantenimiento.png"))); // NOI18N
+        btnMantenimiento.setToolTipText("Mantenimiento");
+        btnMantenimiento.setBorderPainted(false);
+        btnMantenimiento.setContentAreaFilled(false);
+        btnMantenimiento.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMantenimiento.setFocusPainted(false);
+        btnMantenimiento.setFocusable(false);
+        btnMantenimiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMantenimientoActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnMantenimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 150, 130));
+
         lblServicio.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
         lblServicio.setForeground(new java.awt.Color(255, 255, 255));
         lblServicio.setText("Servicio");
-        jPanel2.add(lblServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 140, 50));
+        jPanel2.add(lblServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 140, 50));
 
         btnComputadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/computadora.png"))); // NOI18N
         btnComputadora.setToolTipText("Computadora");
@@ -230,7 +294,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 btnComputadoraActionPerformed(evt);
             }
         });
-        jPanel2.add(btnComputadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 140, 130));
+        jPanel2.add(btnComputadora, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 140, 130));
 
         btnTelefono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Telefono.png"))); // NOI18N
         btnTelefono.setToolTipText("telefono");
@@ -244,7 +308,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 btnTelefonoActionPerformed(evt);
             }
         });
-        jPanel2.add(btnTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 220, 110, 130));
+        jPanel2.add(btnTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, 80, 120));
 
         btnPresupuesto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ReportesPresupuestos.png"))); // NOI18N
         btnPresupuesto.setToolTipText("Presupuesto");
@@ -258,110 +322,17 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 btnPresupuestoActionPerformed(evt);
             }
         });
-        jPanel2.add(btnPresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 410, 130, 160));
-
-        txtCedula.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtCedula.setToolTipText("Ingrese Cedula del Cliente");
-        jPanel2.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 190, 250, 40));
-
-        lblCedula.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblCedula.setForeground(new java.awt.Color(204, 204, 204));
-        lblCedula.setText("Cedula del Cliente");
-        lblCedula.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentHidden(java.awt.event.ComponentEvent evt) {
-                lblCedulaComponentHidden(evt);
-            }
-        });
-        jPanel2.add(lblCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 170, 30));
-
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Buscar.png"))); // NOI18N
-        btnBuscar.setToolTipText("Buscar");
-        btnBuscar.setBorderPainted(false);
-        btnBuscar.setContentAreaFilled(false);
-        btnBuscar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBuscar.setFocusPainted(false);
-        btnBuscar.setFocusable(false);
-        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 180, 60, 60));
-
-        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Agregar.png"))); // NOI18N
-        btnAgregar.setToolTipText("Agregar");
-        btnAgregar.setBorderPainted(false);
-        btnAgregar.setContentAreaFilled(false);
-        btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAgregar.setFocusPainted(false);
-        btnAgregar.setFocusable(false);
-        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 60, 60));
-
-        btnAcerca.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        btnAcerca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/help-hint.png"))); // NOI18N
-        btnAcerca.setText("Acerca de");
-        btnAcerca.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAcerca.setFocusPainted(false);
-        btnAcerca.setFocusable(false);
-        btnAcerca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAcercaActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnAcerca, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 260, 70));
+        jPanel2.add(btnPresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 410, 130, 120));
 
         lblOpciones.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
         lblOpciones.setForeground(new java.awt.Color(255, 255, 255));
         lblOpciones.setText("Opciones");
-        jPanel2.add(lblOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 190, -1));
+        jPanel2.add(lblOpciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 190, -1));
 
         lblReporte.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
         lblReporte.setForeground(new java.awt.Color(255, 255, 255));
         lblReporte.setText("Reportes");
-        jPanel2.add(lblReporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 190, -1));
-
-        lblArchivo.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
-        lblArchivo.setForeground(new java.awt.Color(255, 255, 255));
-        lblArchivo.setText("Archivo");
-        jPanel2.add(lblArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 190, -1));
-
-        lblNombre.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        lblNombre.setForeground(new java.awt.Color(255, 255, 255));
-        lblNombre.setText("                     ");
-        jPanel2.add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 260, -1));
-
-        btnOK.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Seleccionar.png"))); // NOI18N
-        btnOK.setToolTipText("Seleccionar");
-        btnOK.setBorderPainted(false);
-        btnOK.setContentAreaFilled(false);
-        btnOK.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnOK.setFocusPainted(false);
-        btnOK.setFocusable(false);
-        btnOK.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOKActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnOK, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 350, 60, 50));
-
-        btnCobrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Cobrar.png"))); // NOI18N
-        btnCobrar.setToolTipText("Cobro y Entrega");
-        btnCobrar.setBorderPainted(false);
-        btnCobrar.setContentAreaFilled(false);
-        btnCobrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnCobrar.setFocusPainted(false);
-        btnCobrar.setFocusable(false);
-        btnCobrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCobrarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnCobrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, 120, 120));
+        jPanel2.add(lblReporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 190, -1));
 
         btnInventario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inventario.png"))); // NOI18N
         btnInventario.setToolTipText("Inventario");
@@ -375,7 +346,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 btnInventarioActionPerformed(evt);
             }
         });
-        jPanel2.add(btnInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, -1, -1));
+        jPanel2.add(btnInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 200, -1, -1));
 
         btnContabilidad.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/contabilidad.png"))); // NOI18N
         btnContabilidad.setToolTipText("Contabilidad");
@@ -389,11 +360,11 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 btnContabilidadActionPerformed(evt);
             }
         });
-        jPanel2.add(btnContabilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, 140, 140));
+        jPanel2.add(btnContabilidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 140, 140));
 
         Warning.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         Warning.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(Warning, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, 80, 80));
+        jPanel2.add(Warning, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 80, 80));
 
         btnNoReparados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Telefono.png"))); // NOI18N
         btnNoReparados.setToolTipText("Equipos No Reparados");
@@ -407,7 +378,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 btnNoReparadosActionPerformed(evt);
             }
         });
-        jPanel2.add(btnNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 400, 120, 130));
+        jPanel2.add(btnNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 200, 120, 130));
 
         btnInsumos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/insumos.png"))); // NOI18N
         btnInsumos.setToolTipText("Insumos");
@@ -421,40 +392,246 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 btnInsumosActionPerformed(evt);
             }
         });
-        jPanel2.add(btnInsumos, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 130, 120));
+        jPanel2.add(btnInsumos, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 130, 120));
 
-        Brothernologic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Imagen1.png"))); // NOI18N
-        jPanel2.add(Brothernologic, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 310, 380, 90));
-
-        Bandera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/bandera-italiana.png"))); // NOI18N
-        jPanel2.add(Bandera, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 260, 170));
-
-        jPanel1.add(jPanel2);
-        jPanel2.setBounds(150, 40, 640, 700);
-
-        btnOtro.setForeground(new java.awt.Color(153, 255, 255));
-        btnOtro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Analisis1.png"))); // NOI18N
-        btnOtro.setToolTipText("Analisis");
-        btnOtro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true));
-        btnOtro.setContentAreaFilled(false);
-        btnOtro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnOtro.setFocusPainted(false);
-        btnOtro.setFocusable(false);
-        btnOtro.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOtroActionPerformed(evt);
+        lblConsultaRecibo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblConsultaRecibo.setForeground(new java.awt.Color(204, 204, 204));
+        lblConsultaRecibo.setText("Consulta de Recibo");
+        lblConsultaRecibo.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                lblConsultaReciboComponentHidden(evt);
             }
         });
-        jPanel1.add(btnOtro);
-        btnOtro.setBounds(10, 460, 140, 140);
+        jPanel2.add(lblConsultaRecibo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 220, 30));
 
-        Nombre.setFont(new java.awt.Font("Thames", 3, 18)); // NOI18N
-        Nombre.setForeground(new java.awt.Color(255, 255, 255));
-        Nombre.setText("Control Brothernologic V 1.3");
-        jPanel1.add(Nombre);
-        Nombre.setBounds(10, 10, 230, 20);
+        lblEstadoRecibo.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lblEstadoRecibo.setForeground(new java.awt.Color(255, 255, 255));
+        lblEstadoRecibo.setText("                     ");
+        jPanel2.add(lblEstadoRecibo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 270, 30));
 
-        btnCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/user_32.png"))); // NOI18N
+        btnAceptarCod.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Seleccionar.png"))); // NOI18N
+        btnAceptarCod.setToolTipText("Aceptar");
+        btnAceptarCod.setBorderPainted(false);
+        btnAceptarCod.setContentAreaFilled(false);
+        btnAceptarCod.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAceptarCod.setFocusPainted(false);
+        btnAceptarCod.setFocusable(false);
+        btnAceptarCod.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAceptarCodActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnAceptarCod, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 60, 50));
+
+        lblArchivo.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
+        lblArchivo.setForeground(new java.awt.Color(255, 255, 255));
+        lblArchivo.setText("Archivo");
+        jPanel2.add(lblArchivo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 190, -1));
+
+        btnOKCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Seleccionar.png"))); // NOI18N
+        btnOKCliente.setToolTipText("Aceptar");
+        btnOKCliente.setBorderPainted(false);
+        btnOKCliente.setContentAreaFilled(false);
+        btnOKCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnOKCliente.setFocusPainted(false);
+        btnOKCliente.setFocusable(false);
+        btnOKCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOKClienteActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnOKCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 60, 50));
+
+        btnBuscarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Buscar.png"))); // NOI18N
+        btnBuscarCliente.setToolTipText("Buscar");
+        btnBuscarCliente.setBorderPainted(false);
+        btnBuscarCliente.setContentAreaFilled(false);
+        btnBuscarCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscarCliente.setFocusPainted(false);
+        btnBuscarCliente.setFocusable(false);
+        btnBuscarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarClienteActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnBuscarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, 60, 60));
+
+        btnBuscarRecibo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Buscar.png"))); // NOI18N
+        btnBuscarRecibo.setToolTipText("Buscar");
+        btnBuscarRecibo.setBorderPainted(false);
+        btnBuscarRecibo.setContentAreaFilled(false);
+        btnBuscarRecibo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscarRecibo.setFocusPainted(false);
+        btnBuscarRecibo.setFocusable(false);
+        btnBuscarRecibo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarReciboActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnBuscarRecibo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 60, 60));
+
+        lblCodRecibo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblCodRecibo.setForeground(new java.awt.Color(204, 204, 204));
+        lblCodRecibo.setText("Codigo de Recibo");
+        lblCodRecibo.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                lblCodReciboComponentHidden(evt);
+            }
+        });
+        jPanel2.add(lblCodRecibo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 170, 30));
+
+        txtCodRecibo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtCodRecibo.setToolTipText("");
+        jPanel2.add(txtCodRecibo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 250, 40));
+
+        btnIrFactura.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Seleccionar.png"))); // NOI18N
+        btnIrFactura.setToolTipText("Aceptar");
+        btnIrFactura.setBorderPainted(false);
+        btnIrFactura.setContentAreaFilled(false);
+        btnIrFactura.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnIrFactura.setFocusPainted(false);
+        btnIrFactura.setFocusable(false);
+        btnIrFactura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIrFacturaActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnIrFactura, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 430, 60, 50));
+
+        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Agregar.png"))); // NOI18N
+        btnAgregar.setToolTipText("Agregar");
+        btnAgregar.setBorderPainted(false);
+        btnAgregar.setContentAreaFilled(false);
+        btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAgregar.setFocusPainted(false);
+        btnAgregar.setFocusable(false);
+        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 70, 60));
+
+        lblCedula.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblCedula.setForeground(new java.awt.Color(204, 204, 204));
+        lblCedula.setText("Cedula del Cliente");
+        lblCedula.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                lblCedulaComponentHidden(evt);
+            }
+        });
+        jPanel2.add(lblCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 170, 30));
+
+        lblNombre.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lblNombre.setForeground(new java.awt.Color(255, 255, 255));
+        lblNombre.setText("                     ");
+        jPanel2.add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 330, 30));
+
+        txtCedula.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtCedula.setToolTipText("");
+        jPanel2.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 250, 40));
+
+        lblConsultaCliente.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblConsultaCliente.setForeground(new java.awt.Color(204, 204, 204));
+        lblConsultaCliente.setText("Consulta de Cliente");
+        lblConsultaCliente.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                lblConsultaClienteComponentHidden(evt);
+            }
+        });
+        jPanel2.add(lblConsultaCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 220, 30));
+
+        lblAnalisis.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
+        lblAnalisis.setForeground(new java.awt.Color(255, 255, 255));
+        lblAnalisis.setText("Analisis");
+        jPanel2.add(lblAnalisis, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 190, -1));
+
+        btnAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Ayuda.png"))); // NOI18N
+        btnAyuda.setToolTipText("Ayuda");
+        btnAyuda.setBorderPainted(false);
+        btnAyuda.setContentAreaFilled(false);
+        btnAyuda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAyuda.setFocusPainted(false);
+        btnAyuda.setFocusable(false);
+        btnAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAyudaActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 190, 140, 130));
+
+        btnEstatus.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/estatus.png"))); // NOI18N
+        btnEstatus.setToolTipText("Estatus Servicio");
+        btnEstatus.setBorderPainted(false);
+        btnEstatus.setContentAreaFilled(false);
+        btnEstatus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEstatus.setFocusPainted(false);
+        btnEstatus.setFocusable(false);
+        btnEstatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEstatusActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnEstatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 400, 140, 140));
+
+        btnIngresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ingreso.png"))); // NOI18N
+        btnIngresos.setToolTipText("Ingresos");
+        btnIngresos.setBorderPainted(false);
+        btnIngresos.setContentAreaFilled(false);
+        btnIngresos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnIngresos.setFocusPainted(false);
+        btnIngresos.setFocusable(false);
+        btnIngresos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresosActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnIngresos, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, -1, -1));
+
+        btnEgresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/egreso.png"))); // NOI18N
+        btnEgresos.setToolTipText("Egresos");
+        btnEgresos.setBorderPainted(false);
+        btnEgresos.setContentAreaFilled(false);
+        btnEgresos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEgresos.setFocusPainted(false);
+        btnEgresos.setFocusable(false);
+        btnEgresos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEgresosActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnEgresos, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 190, 140, 140));
+
+        btnImpresora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Impresora.png"))); // NOI18N
+        btnImpresora.setToolTipText("Impresora");
+        btnImpresora.setBorderPainted(false);
+        btnImpresora.setContentAreaFilled(false);
+        btnImpresora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnImpresora.setFocusPainted(false);
+        btnImpresora.setFocusable(false);
+        btnImpresora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImpresoraActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnImpresora, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, 130, 130));
+
+        btnAcerca.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        btnAcerca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Acercade.png"))); // NOI18N
+        btnAcerca.setToolTipText("Acerca de");
+        btnAcerca.setBorderPainted(false);
+        btnAcerca.setContentAreaFilled(false);
+        btnAcerca.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAcerca.setFocusPainted(false);
+        btnAcerca.setFocusable(false);
+        btnAcerca.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAcercaActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnAcerca, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 410, 150, 130));
+
+        btnCerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cambiarusuario.png"))); // NOI18N
         btnCerrarSesion.setToolTipText("Cerrar sesión");
         btnCerrarSesion.setBorderPainted(false);
         btnCerrarSesion.setContentAreaFilled(false);
@@ -466,24 +643,131 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 btnCerrarSesionActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCerrarSesion);
-        btnCerrarSesion.setBounds(700, 10, 30, 30);
+        jPanel2.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 200, 160, 140));
 
-        btnOtro1.setForeground(new java.awt.Color(153, 255, 255));
-        btnOtro1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/servicios.png"))); // NOI18N
-        btnOtro1.setToolTipText("Servicios");
-        btnOtro1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true));
-        btnOtro1.setContentAreaFilled(false);
-        btnOtro1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnOtro1.setFocusPainted(false);
-        btnOtro1.setFocusable(false);
-        btnOtro1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnOtro1ActionPerformed(evt);
+        lblCedulaUsuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblCedulaUsuario.setForeground(new java.awt.Color(204, 204, 204));
+        lblCedulaUsuario.setText("Cedula del Usuario");
+        lblCedulaUsuario.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                lblCedulaUsuarioComponentHidden(evt);
             }
         });
-        jPanel1.add(btnOtro1);
-        btnOtro1.setBounds(10, 180, 140, 140);
+        jPanel2.add(lblCedulaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, 170, 30));
+
+        btnAgregarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Agregar.png"))); // NOI18N
+        btnAgregarUsuario.setToolTipText("Agregar");
+        btnAgregarUsuario.setBorderPainted(false);
+        btnAgregarUsuario.setContentAreaFilled(false);
+        btnAgregarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAgregarUsuario.setFocusPainted(false);
+        btnAgregarUsuario.setFocusable(false);
+        btnAgregarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAgregarUsuarioActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnAgregarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, 60, 60));
+
+        txtCedulaUsuario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtCedulaUsuario.setToolTipText("");
+        jPanel2.add(txtCedulaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, 250, 40));
+
+        lblNombreUsuario.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        lblNombreUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        lblNombreUsuario.setText("                     ");
+        jPanel2.add(lblNombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 620, 330, 30));
+
+        lblConsultaUsuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblConsultaUsuario.setForeground(new java.awt.Color(204, 204, 204));
+        lblConsultaUsuario.setText("Consulta de Usuario");
+        lblConsultaUsuario.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                lblConsultaUsuarioComponentHidden(evt);
+            }
+        });
+        jPanel2.add(lblConsultaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 220, 30));
+
+        btnOKUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Seleccionar.png"))); // NOI18N
+        btnOKUsuario.setToolTipText("Aceptar");
+        btnOKUsuario.setBorderPainted(false);
+        btnOKUsuario.setContentAreaFilled(false);
+        btnOKUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnOKUsuario.setFocusPainted(false);
+        btnOKUsuario.setFocusable(false);
+        btnOKUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOKUsuarioActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnOKUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 610, 60, 50));
+
+        Brothernologic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Imagen1.png"))); // NOI18N
+        jPanel2.add(Brothernologic, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 380, 60));
+
+        Bandera.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/bandera-italiana.png"))); // NOI18N
+        jPanel2.add(Bandera, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, 250, 170));
+
+        btnBuscarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Buscar.png"))); // NOI18N
+        btnBuscarUsuario.setToolTipText("Buscar");
+        btnBuscarUsuario.setBorderPainted(false);
+        btnBuscarUsuario.setContentAreaFilled(false);
+        btnBuscarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscarUsuario.setFocusPainted(false);
+        btnBuscarUsuario.setFocusable(false);
+        btnBuscarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarUsuarioActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnBuscarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, 60, 60));
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(150, 40, 640, 700);
+
+        btnAnalisis.setForeground(new java.awt.Color(153, 255, 255));
+        btnAnalisis.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Analisis1.png"))); // NOI18N
+        btnAnalisis.setToolTipText("Analisis");
+        btnAnalisis.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true));
+        btnAnalisis.setContentAreaFilled(false);
+        btnAnalisis.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAnalisis.setFocusPainted(false);
+        btnAnalisis.setFocusable(false);
+        btnAnalisis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnalisisActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnAnalisis);
+        btnAnalisis.setBounds(10, 460, 140, 140);
+
+        Nombre.setFont(new java.awt.Font("Thames", 3, 18)); // NOI18N
+        Nombre.setForeground(new java.awt.Color(255, 255, 255));
+        Nombre.setText("Control Brothernologic V 1.3");
+        jPanel1.add(Nombre);
+        Nombre.setBounds(20, 10, 230, 20);
+
+        Administrador.setFont(new java.awt.Font("Thames", 1, 14)); // NOI18N
+        Administrador.setForeground(new java.awt.Color(255, 255, 255));
+        Administrador.setText("Administrador");
+        jPanel1.add(Administrador);
+        Administrador.setBounds(620, 20, 100, 20);
+
+        btnServicios.setForeground(new java.awt.Color(153, 255, 255));
+        btnServicios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/servicios.png"))); // NOI18N
+        btnServicios.setToolTipText("Servicios");
+        btnServicios.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true));
+        btnServicios.setContentAreaFilled(false);
+        btnServicios.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnServicios.setFocusPainted(false);
+        btnServicios.setFocusable(false);
+        btnServicios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnServiciosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnServicios);
+        btnServicios.setBounds(10, 180, 140, 140);
 
         Fondo.setBackground(new java.awt.Color(204, 204, 204));
         Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -536,8 +820,8 @@ public class PrincipalAdmin extends javax.swing.JFrame {
     private void btnArchivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnArchivoActionPerformed
         lblCedula.setVisible(true);
         txtCedula.setVisible(true);
-        btnBuscar.setVisible(true);
-        btnAgregar.setVisible(true);
+        btnBuscarCliente.setVisible(true);
+        btnAgregar.setVisible(false);
         lblServicio.setVisible(false);
         btnComputadora.setVisible(false);
         btnTelefono.setVisible(false);
@@ -545,21 +829,41 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnAcerca.setVisible(false);
         lblOpciones.setVisible(false);
         lblArchivo.setVisible(true);
-        lblReporte.setVisible(false);
+        lblAnalisis.setVisible(false);
         lblNombre.setVisible(false);
-        btnOK.setVisible(false);
-        btnCobrar.setVisible(false);
+        btnOKCliente.setVisible(false);
+        btnImpresora.setVisible(false);
         btnInsumos.setVisible(false);
         btnNoReparados.setVisible(false);
-        btnInventario.setVisible(false);
-        btnContabilidad.setVisible(false);
+        btnIngresos.setVisible(false);
+        btnEgresos.setVisible(false);
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(true);
-        btnReporte.setBorderPainted(false);
-        btnOtro.setBorderPainted(false);
+        btnAnalisis.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
         btnOpciones.setBorderPainted(false);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
+        txtCodRecibo.setVisible(true);
+        lblCodRecibo.setVisible(true);
+        btnBuscarRecibo.setVisible(true);
+        lblConsultaCliente.setVisible(true);
+        lblConsultaRecibo.setVisible(true);
+        btnCerrarSesion.setVisible(false);
+        btnAyuda.setVisible(false);
+        btnEstatus.setVisible(false);
+        btnReporte.setBorderPainted(false);
+        lblReporte.setVisible(false);
+        btnContabilidad.setVisible(false);
+        btnInventario.setVisible(false);
+        lblConsultaUsuario.setVisible(true);
+        lblCedulaUsuario.setVisible(true);
+        lblNombreUsuario.setVisible(true);
+        txtCedulaUsuario.setVisible(true);
+        btnAgregarUsuario.setVisible(true);
+        btnBuscarUsuario.setVisible(true);
+        btnMantenimiento.setVisible(false);
+        
     }//GEN-LAST:event_btnArchivoActionPerformed
 
     private void btnReporteMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnReporteMouseEntered
@@ -569,7 +873,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
     private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
         lblCedula.setVisible(false);
         txtCedula.setVisible(false);
-        btnBuscar.setVisible(false);
+        btnBuscarCliente.setVisible(false);
         btnAgregar.setVisible(false);
         lblServicio.setVisible(false);
         btnComputadora.setVisible(false);
@@ -580,19 +884,34 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         lblArchivo.setVisible(false);
         lblReporte.setVisible(true);
         lblNombre.setVisible(false);
-        btnOK.setVisible(false);
-        btnCobrar.setVisible(false);
-        btnInsumos.setVisible(true);
+        btnOKCliente.setVisible(false);
+        btnIngresos.setVisible(false);
+        btnEgresos.setVisible(false);
+        btnInsumos.setVisible(false);
         btnNoReparados.setVisible(true);
         btnInventario.setVisible(true);
         btnContabilidad.setVisible(true);
         Warning.setVisible(true);
         btnArchivo.setBorderPainted(false);
         btnReporte.setBorderPainted(true);
-        btnOtro.setBorderPainted(false);
+        btnAnalisis.setBorderPainted(false);
         btnOpciones.setBorderPainted(false);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
+        btnContabilidad.setVisible(true);
+        btnInventario.setVisible(true);
+        btnServicios.setBorderPainted(false);
+        btnImpresora.setVisible(false);
+        btnEstatus.setVisible(false);
+        lblConsultaUsuario.setVisible(false);
+        lblCedulaUsuario.setVisible(false);
+        lblNombreUsuario.setVisible(false);
+        txtCedulaUsuario.setVisible(false);
+        btnOKUsuario.setVisible(false);
+        btnAgregarUsuario.setVisible(false);
+         btnBuscarUsuario.setVisible(false);
+         btnMantenimiento.setVisible(false);
+       
     }//GEN-LAST:event_btnReporteActionPerformed
 
     private void btnOpcionesMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnOpcionesMouseEntered
@@ -602,7 +921,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
     private void btnOpcionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOpcionesActionPerformed
         lblCedula.setVisible(false);
         txtCedula.setVisible(false);
-        btnBuscar.setVisible(false);
+        btnBuscarCliente.setVisible(false);
         btnAgregar.setVisible(false);
         lblServicio.setVisible(false);
         btnComputadora.setVisible(false);
@@ -610,22 +929,45 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnPresupuesto.setVisible(false);
         btnAcerca.setVisible(true);
         lblOpciones.setVisible(true);
-        lblReporte.setVisible(false);
+        lblAnalisis.setVisible(false);
         lblArchivo.setVisible(false);
         lblNombre.setVisible(false);
-        btnOK.setVisible(false);
-        btnCobrar.setVisible(false);
+        btnOKCliente.setVisible(false);
+        btnImpresora.setVisible(false);
         btnInsumos.setVisible(false);
         btnNoReparados.setVisible(false);
-        btnInventario.setVisible(false);
-        btnContabilidad.setVisible(false);
+        btnIngresos.setVisible(false);
+        btnEgresos.setVisible(false);
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(false);
-        btnReporte.setBorderPainted(false);
-        btnOtro.setBorderPainted(false);
+        btnAnalisis.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
         btnOpciones.setBorderPainted(true);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
+        txtCodRecibo.setVisible(false);
+        lblCodRecibo.setVisible(false);
+        btnIrFactura.setVisible(false);
+        btnBuscarRecibo.setVisible(false);
+        btnAceptarCod.setVisible(false);
+        lblConsultaCliente.setVisible(false);
+        lblConsultaRecibo.setVisible(false);
+         lblEstadoRecibo.setVisible(false);
+         btnCerrarSesion.setVisible(true);
+        btnAyuda.setVisible(true);
+        btnEstatus.setVisible(false);
+        btnReporte.setBorderPainted(false);
+        lblReporte.setVisible(false);
+        btnContabilidad.setVisible(false);
+        btnInventario.setVisible(false);
+        lblConsultaUsuario.setVisible(false);
+        lblCedulaUsuario.setVisible(false);
+        lblNombreUsuario.setVisible(false);
+        txtCedulaUsuario.setVisible(false);
+        btnOKUsuario.setVisible(false);
+        btnAgregarUsuario.setVisible(false);
+         btnBuscarUsuario.setVisible(false);
+         btnMantenimiento.setVisible(true);
     }//GEN-LAST:event_btnOpcionesActionPerformed
 
     private void btnComputadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComputadoraActionPerformed
@@ -655,66 +997,6 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         pre.setVisible(true);
 
     }//GEN-LAST:event_btnPresupuestoActionPerformed
-
-    private void lblCedulaComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblCedulaComponentHidden
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblCedulaComponentHidden
-
-    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
-        if(txtCedula.getText().equals("1234")){
-            lblNombre.setVisible(true);
-            btnOK.setVisible(true);
-            lblNombre.setText("Nombre Usuario");
-        }
-    }//GEN-LAST:event_btnBuscarActionPerformed
-
-    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        NuevoCliente nvo=new NuevoCliente();
-
-        nvo.setResizable(false);
-        nvo.setLocationRelativeTo(null);
-        nvo.setVisible(true);
-
-    }//GEN-LAST:event_btnAgregarActionPerformed
-
-    private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-        lblCedula.setVisible(false);
-        txtCedula.setVisible(false);
-        btnBuscar.setVisible(false);
-        btnAgregar.setVisible(false);
-        lblServicio.setVisible(false);
-        btnComputadora.setVisible(true);
-        btnTelefono.setVisible(true);
-        btnPresupuesto.setVisible(true);
-        btnAcerca.setVisible(false);
-        lblOpciones.setVisible(false);
-        lblArchivo.setVisible(true);
-        lblReporte.setVisible(false);
-        lblNombre.setVisible(false);
-        btnOK.setVisible(false);
-        btnCobrar.setVisible(true);
-        btnInsumos.setVisible(false);
-        btnNoReparados.setVisible(false);
-        btnInventario.setVisible(false);
-        btnContabilidad.setVisible(false);
-        Warning.setVisible(false);
-        btnArchivo.setBorderPainted(true);
-        btnReporte.setBorderPainted(false);
-        btnOtro.setBorderPainted(false);
-        btnOpciones.setBorderPainted(false);
-        Bandera.setVisible(false);
-        Brothernologic.setVisible(false);
-    }//GEN-LAST:event_btnOKActionPerformed
-
-    private void btnCobrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCobrarActionPerformed
-
-        Cobrar cobro=new Cobrar();
-
-        cobro.setResizable(false);
-        cobro.setLocationRelativeTo(null);
-        cobro.setVisible(true);
-
-    }//GEN-LAST:event_btnCobrarActionPerformed
 
     private void btnInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventarioActionPerformed
 
@@ -749,10 +1031,10 @@ public class PrincipalAdmin extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnInsumosActionPerformed
 
-    private void btnOtroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOtroActionPerformed
-        lblCedula.setVisible(false);
+    private void btnAnalisisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnalisisActionPerformed
+         lblCedula.setVisible(false);
         txtCedula.setVisible(false);
-        btnBuscar.setVisible(false);
+        btnBuscarCliente.setVisible(false);
         btnAgregar.setVisible(false);
         lblServicio.setVisible(false);
         btnComputadora.setVisible(false);
@@ -761,22 +1043,45 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnAcerca.setVisible(false);
         lblOpciones.setVisible(false);
         lblArchivo.setVisible(false);
-        lblReporte.setVisible(false);
+        lblAnalisis.setVisible(true);
         lblNombre.setVisible(false);
-        btnOK.setVisible(false);
-        btnCobrar.setVisible(false);
-        btnInsumos.setVisible(false);
+        btnOKCliente.setVisible(false);
+        btnImpresora.setVisible(false);
+        btnInsumos.setVisible(true);
         btnNoReparados.setVisible(false);
-        btnInventario.setVisible(false);
-        btnContabilidad.setVisible(false);
+        btnIngresos.setVisible(true);
+        btnEgresos.setVisible(true);
         Warning.setVisible(false);
         btnArchivo.setBorderPainted(false);
-        btnReporte.setBorderPainted(false);
-        btnOtro.setBorderPainted(true);
+        btnAnalisis.setBorderPainted(true);
+        btnServicios.setBorderPainted(false);
         btnOpciones.setBorderPainted(false);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
-    }//GEN-LAST:event_btnOtroActionPerformed
+        txtCodRecibo.setVisible(false);
+        lblCodRecibo.setVisible(false);
+        btnIrFactura.setVisible(false);
+        btnAceptarCod.setVisible(false);
+        btnBuscarRecibo.setVisible(false);
+        lblConsultaCliente.setVisible(false);
+        lblConsultaRecibo.setVisible(false);
+        lblEstadoRecibo.setVisible(false);
+        btnCerrarSesion.setVisible(false);
+        btnAyuda.setVisible(false);
+        btnEstatus.setVisible(true);
+        btnReporte.setBorderPainted(false);
+        lblReporte.setVisible(false);
+        btnContabilidad.setVisible(false);
+        btnInventario.setVisible(false);
+        lblConsultaUsuario.setVisible(false);
+        lblCedulaUsuario.setVisible(false);
+        lblNombreUsuario.setVisible(false);
+        txtCedulaUsuario.setVisible(false);
+        btnOKUsuario.setVisible(false);
+        btnAgregarUsuario.setVisible(false);
+         btnBuscarUsuario.setVisible(false);
+         btnMantenimiento.setVisible(false);
+    }//GEN-LAST:event_btnAnalisisActionPerformed
 
     private void btnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarSesionActionPerformed
 
@@ -809,19 +1114,373 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1MouseEntered
 
+    private void btnServiciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnServiciosActionPerformed
+      lblCedula.setVisible(false);
+        txtCedula.setVisible(false);
+        btnBuscarCliente.setVisible(false);
+        btnAgregar.setVisible(false);
+        lblServicio.setVisible(true);
+        btnComputadora.setVisible(true);
+        btnTelefono.setVisible(true);
+        btnPresupuesto.setVisible(true);
+        btnAcerca.setVisible(false);
+        lblOpciones.setVisible(false);
+        lblArchivo.setVisible(false);
+        lblAnalisis.setVisible(false);
+        lblNombre.setVisible(false);
+        btnOKCliente.setVisible(false);
+        btnImpresora.setVisible(true);
+        btnInsumos.setVisible(false);
+        btnNoReparados.setVisible(false);
+        btnIngresos.setVisible(false);
+        btnEgresos.setVisible(false);
+        Warning.setVisible(false);
+        btnArchivo.setBorderPainted(false);
+        btnAnalisis.setBorderPainted(false);
+        btnServicios.setBorderPainted(true);
+        btnOpciones.setBorderPainted(false);
+        Bandera.setVisible(false);
+        Brothernologic.setVisible(false);
+        txtCodRecibo.setVisible(false);
+        lblCodRecibo.setVisible(false);
+        btnBuscarRecibo.setVisible(false);
+        btnIrFactura.setVisible(false);
+        btnAceptarCod.setVisible(false);
+        lblConsultaCliente.setVisible(false);
+        lblConsultaRecibo.setVisible(false);
+         lblEstadoRecibo.setVisible(false);
+         btnCerrarSesion.setVisible(false);
+        btnAyuda.setVisible(false);
+        btnEstatus.setVisible(false);
+        btnReporte.setBorderPainted(false);
+lblReporte.setVisible(false);
+btnContabilidad.setVisible(false);
+        btnInventario.setVisible(false);
+lblConsultaUsuario.setVisible(false);
+        lblCedulaUsuario.setVisible(false);
+        lblNombreUsuario.setVisible(false);
+        txtCedulaUsuario.setVisible(false);
+        btnOKUsuario.setVisible(false);
+        btnAgregarUsuario.setVisible(false);
+ btnBuscarUsuario.setVisible(false);
+btnMantenimiento.setVisible(false);// TODO add your handling code here:
+    }//GEN-LAST:event_btnServiciosActionPerformed
+
+    private void lblConsultaReciboComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblConsultaReciboComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblConsultaReciboComponentHidden
+
+    private void btnAceptarCodActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarCodActionPerformed
+        lblCedula.setVisible(false);
+        txtCedula.setVisible(false);
+        txtCedula.setText("");
+        btnBuscarCliente.setVisible(false);
+        btnAgregar.setVisible(false);
+        lblServicio.setVisible(false);
+        btnComputadora.setVisible(false);
+        btnTelefono.setVisible(false);
+        btnPresupuesto.setVisible(false);
+        btnAcerca.setVisible(false);
+        lblOpciones.setVisible(false);
+        lblArchivo.setVisible(false);
+        lblAnalisis.setVisible(false);
+        lblNombre.setVisible(false);
+        btnOKCliente.setVisible(false);
+        btnImpresora.setVisible(false);
+        btnInsumos.setVisible(false);
+        btnNoReparados.setVisible(false);
+        btnIngresos.setVisible(false);
+        btnEgresos.setVisible(false);
+        Warning.setVisible(false);
+        btnArchivo.setBorderPainted(false);
+        btnAnalisis.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
+        btnOpciones.setBorderPainted(false);
+        Bandera.setVisible(true);
+        Brothernologic.setVisible(true);
+        txtCodRecibo.setVisible(false);
+        lblCodRecibo.setVisible(false);
+        btnIrFactura.setVisible(false);
+        btnAceptarCod.setVisible(false);
+        btnBuscarRecibo.setVisible(false);
+        lblConsultaCliente.setVisible(false);
+        lblConsultaRecibo.setVisible(false);
+        lblEstadoRecibo.setVisible(false);
+        btnCerrarSesion.setVisible(false);
+        btnAyuda.setVisible(false);
+        btnEstatus.setVisible(false);
+        btnReporte.setBorderPainted(false);
+        lblReporte.setVisible(false);
+        btnContabilidad.setVisible(false);
+        btnInventario.setVisible(false);
+        lblConsultaUsuario.setVisible(false);
+        lblCedulaUsuario.setVisible(false);
+        lblNombreUsuario.setVisible(false);
+        txtCedulaUsuario.setVisible(false);
+        btnOKUsuario.setVisible(false);
+        btnAgregarUsuario.setVisible(false);
+         btnBuscarUsuario.setVisible(false);
+         btnMantenimiento.setVisible(false);
+    }//GEN-LAST:event_btnAceptarCodActionPerformed
+
+    private void btnOKClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKClienteActionPerformed
+        
+        txtCedula.setText("");
+        
+        lblNombre.setVisible(false);
+        btnOKCliente.setVisible(false);
+    }//GEN-LAST:event_btnOKClienteActionPerformed
+
+    private void btnBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarClienteActionPerformed
+        btnAgregar.setVisible(false);
+        if(txtCedula.getText().equals("1234")){
+            lblNombre.setVisible(true);
+            btnOKCliente.setVisible(true);
+            lblNombre.setText("Nombre Cliente");
+        }
+        else{
+            lblNombre.setVisible(true);
+            lblNombre.setText("Cliente No registrado");
+            btnAgregar.setVisible(true);
+        }
+    }//GEN-LAST:event_btnBuscarClienteActionPerformed
+
+    private void btnBuscarReciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarReciboActionPerformed
+        if(txtCodRecibo.getText().equals("001")){
+            lblEstadoRecibo.setVisible(true);
+            btnIrFactura.setVisible(true);
+            btnAceptarCod.setVisible(false);
+            lblEstadoRecibo.setText("Servicio Realizado");
+        }
+        if(txtCodRecibo.getText().equals("002")){
+            lblEstadoRecibo.setVisible(true);
+            lblEstadoRecibo.setText("Servicio No Realizado");
+            btnAceptarCod.setVisible(true);
+            btnIrFactura.setVisible(false);
+        }
+        if(txtCodRecibo.getText().equals("")){
+            lblEstadoRecibo.setVisible(true);
+            lblEstadoRecibo.setText("Error (recibo no encontrado)");
+            btnAceptarCod.setVisible(true);
+            btnIrFactura.setVisible(false);
+        }
+    }//GEN-LAST:event_btnBuscarReciboActionPerformed
+
+    private void lblCodReciboComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblCodReciboComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblCodReciboComponentHidden
+
+    private void btnIrFacturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrFacturaActionPerformed
+        Factura c=new Factura();
+        c.setResizable(false);
+        c.setLocationRelativeTo(null);
+        c.setVisible(true);
+        lblCedula.setVisible(false);
+        txtCedula.setVisible(false);
+        txtCedula.setText("");
+        btnBuscarCliente.setVisible(false);
+        btnAgregar.setVisible(false);
+        lblServicio.setVisible(false);
+        btnComputadora.setVisible(false);
+        btnTelefono.setVisible(false);
+        btnPresupuesto.setVisible(false);
+        btnAcerca.setVisible(false);
+        lblOpciones.setVisible(false);
+        lblArchivo.setVisible(false);
+        lblAnalisis.setVisible(false);
+        lblNombre.setVisible(false);
+        btnOKCliente.setVisible(false);
+        btnImpresora.setVisible(false);
+        btnInsumos.setVisible(false);
+        btnNoReparados.setVisible(false);
+        btnIngresos.setVisible(false);
+        btnEgresos.setVisible(false);
+        Warning.setVisible(false);
+        btnArchivo.setBorderPainted(false);
+        btnAnalisis.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
+        btnOpciones.setBorderPainted(false);
+        Bandera.setVisible(true);
+        Brothernologic.setVisible(true);
+        txtCodRecibo.setVisible(false);
+        lblCodRecibo.setVisible(false);
+        btnIrFactura.setVisible(false);
+        btnAceptarCod.setVisible(false);
+        btnBuscarRecibo.setVisible(false);
+        lblConsultaCliente.setVisible(false);
+        lblConsultaRecibo.setVisible(false);
+        lblEstadoRecibo.setVisible(false);
+        btnCerrarSesion.setVisible(false);
+        btnAyuda.setVisible(false);
+        btnEstatus.setVisible(false);
+        btnReporte.setBorderPainted(false);
+        lblReporte.setVisible(false);
+        btnContabilidad.setVisible(false);
+        btnInventario.setVisible(false);
+        lblConsultaUsuario.setVisible(false);
+        lblCedulaUsuario.setVisible(false);
+        lblNombreUsuario.setVisible(false);
+        txtCedulaUsuario.setVisible(false);
+        btnOKUsuario.setVisible(false);
+        btnAgregarUsuario.setVisible(false);
+         btnBuscarUsuario.setVisible(false);
+         btnMantenimiento.setVisible(false);
+    }//GEN-LAST:event_btnIrFacturaActionPerformed
+
+    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
+
+        NuevoCliente nvo=new NuevoCliente();
+
+        nvo.setResizable(false);
+        nvo.setLocationRelativeTo(null);
+        nvo.setVisible(true);
+
+        lblCedula.setVisible(false);
+        txtCedula.setVisible(false);
+        txtCedula.setText("");
+        btnBuscarCliente.setVisible(false);
+        btnAgregar.setVisible(false);
+        lblServicio.setVisible(false);
+        btnComputadora.setVisible(false);
+        btnTelefono.setVisible(false);
+        btnPresupuesto.setVisible(false);
+        btnAcerca.setVisible(false);
+        lblOpciones.setVisible(false);
+        lblArchivo.setVisible(false);
+        lblAnalisis.setVisible(false);
+        lblNombre.setVisible(false);
+        btnOKCliente.setVisible(false);
+        btnImpresora.setVisible(false);
+        btnInsumos.setVisible(false);
+        btnNoReparados.setVisible(false);
+        btnIngresos.setVisible(false);
+        btnEgresos.setVisible(false);
+        Warning.setVisible(false);
+        btnArchivo.setBorderPainted(false);
+        btnAnalisis.setBorderPainted(false);
+        btnServicios.setBorderPainted(false);
+        btnOpciones.setBorderPainted(false);
+        Bandera.setVisible(true);
+        Brothernologic.setVisible(true);
+        txtCodRecibo.setVisible(false);
+        lblCodRecibo.setVisible(false);
+        btnIrFactura.setVisible(false);
+        btnAceptarCod.setVisible(false);
+        btnBuscarRecibo.setVisible(false);
+        lblConsultaCliente.setVisible(false);
+        lblConsultaRecibo.setVisible(false);
+        lblEstadoRecibo.setVisible(false);
+        btnCerrarSesion.setVisible(false);
+        btnAyuda.setVisible(false);
+        btnEstatus.setVisible(false);
+        btnReporte.setBorderPainted(false);
+        lblReporte.setVisible(false);
+        btnContabilidad.setVisible(false);
+        btnInventario.setVisible(false);
+        lblConsultaUsuario.setVisible(false);
+        lblCedulaUsuario.setVisible(false);
+        lblNombreUsuario.setVisible(false);
+        txtCedulaUsuario.setVisible(false);
+        btnOKUsuario.setVisible(false);
+        btnAgregarUsuario.setVisible(false);
+         btnBuscarUsuario.setVisible(false);
+         btnMantenimiento.setVisible(false);
+    }//GEN-LAST:event_btnAgregarActionPerformed
+
+    private void lblCedulaComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblCedulaComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblCedulaComponentHidden
+
+    private void lblConsultaClienteComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblConsultaClienteComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblConsultaClienteComponentHidden
+
+    private void btnAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAyudaActionPerformed
+    try {
+              Runtime.getRuntime().exec("rundll32 url.dll,FileProtocolHandler " + "src\\MANUAL\\MANUAL.pdf");
+    } catch (Exception e){
+      JOptionPane.showMessageDialog(rootPane, "Error al Abrir el Archivo", "ERROR", JOptionPane.ERROR_MESSAGE);  
+    }
+    }//GEN-LAST:event_btnAyudaActionPerformed
+
+    private void btnEstatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEstatusActionPerformed
+        Estatus es=new Estatus();
+
+        es.setResizable(false);
+        es.setLocationRelativeTo(null);
+        es.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEstatusActionPerformed
+
+    private void btnIngresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresosActionPerformed
+Ingresos in=new Ingresos();
+                
+        in.setResizable(false);
+        in.setLocationRelativeTo(null);
+        in.setVisible(true);
+    }//GEN-LAST:event_btnIngresosActionPerformed
+
+    private void btnEgresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEgresosActionPerformed
+Egresos egr=new Egresos();
+                
+        egr.setResizable(false);
+        egr.setLocationRelativeTo(null);
+        egr.setVisible(true);
+    }//GEN-LAST:event_btnEgresosActionPerformed
+
+    private void btnImpresoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImpresoraActionPerformed
+        Impresora im=new Impresora();
+                
+        im.setResizable(false);
+        im.setLocationRelativeTo(null);
+        im.setVisible(true);
+    }//GEN-LAST:event_btnImpresoraActionPerformed
+
     private void btnAcercaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcercaActionPerformed
-       AcercaDe ad=new AcercaDe();
+        AcercaDe ad=new AcercaDe();
 
         ad.setResizable(false);
         ad.setLocationRelativeTo(null);
         ad.setVisible(true);
-         
-        
     }//GEN-LAST:event_btnAcercaActionPerformed
 
-    private void btnOtro1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOtro1ActionPerformed
+    private void lblCedulaUsuarioComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblCedulaUsuarioComponentHidden
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnOtro1ActionPerformed
+    }//GEN-LAST:event_lblCedulaUsuarioComponentHidden
+
+    private void btnAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAgregarUsuarioActionPerformed
+
+    private void lblConsultaUsuarioComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblConsultaUsuarioComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblConsultaUsuarioComponentHidden
+
+    private void btnOKUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKUsuarioActionPerformed
+       btnOKUsuario.setVisible(false);
+       lblNombreUsuario.setText("");
+       txtCedulaUsuario.setText("");
+    }//GEN-LAST:event_btnOKUsuarioActionPerformed
+
+    private void btnBuscarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarUsuarioActionPerformed
+         if(txtCedulaUsuario.getText().equals("1234")){
+            lblNombreUsuario.setVisible(true);
+            btnOKUsuario.setVisible(true);
+            lblNombreUsuario.setText("Nombre Usuario");
+        }
+        else{
+            lblNombreUsuario.setVisible(true);
+            lblNombreUsuario.setText("Usuario No registrado");
+            btnOKUsuario.setVisible(true);
+        }
+    }//GEN-LAST:event_btnBuscarUsuarioActionPerformed
+
+    private void btnMantenimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMantenimientoActionPerformed
+        
+        Mantenimiento man=new Mantenimiento();
+        man.setResizable(false);
+        man.setLocationRelativeTo(null);
+        man.setVisible(true);
+    }//GEN-LAST:event_btnMantenimientoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -862,6 +1521,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Administrador;
     private javax.swing.JLabel Bandera;
     private javax.swing.JLabel Brothernologic;
     private javax.swing.JButton Cerrar;
@@ -869,32 +1529,53 @@ public class PrincipalAdmin extends javax.swing.JFrame {
     private javax.swing.JButton Minimizar;
     private javax.swing.JLabel Nombre;
     private javax.swing.JLabel Warning;
+    private javax.swing.JButton btnAceptarCod;
     private javax.swing.JButton btnAcerca;
     private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnAgregarUsuario;
+    private javax.swing.JButton btnAnalisis;
     private javax.swing.JButton btnArchivo;
-    private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnAyuda;
+    private javax.swing.JButton btnBuscarCliente;
+    private javax.swing.JButton btnBuscarRecibo;
+    private javax.swing.JButton btnBuscarUsuario;
     private javax.swing.JButton btnCerrarSesion;
-    private javax.swing.JButton btnCobrar;
     private javax.swing.JButton btnComputadora;
     private javax.swing.JButton btnContabilidad;
+    private javax.swing.JButton btnEgresos;
+    private javax.swing.JButton btnEstatus;
+    private javax.swing.JButton btnImpresora;
+    private javax.swing.JButton btnIngresos;
     private javax.swing.JButton btnInsumos;
     private javax.swing.JButton btnInventario;
+    private javax.swing.JButton btnIrFactura;
+    private javax.swing.JButton btnMantenimiento;
     private javax.swing.JButton btnNoReparados;
-    private javax.swing.JButton btnOK;
+    private javax.swing.JButton btnOKCliente;
+    private javax.swing.JButton btnOKUsuario;
     private javax.swing.JButton btnOpciones;
-    private javax.swing.JButton btnOtro;
-    private javax.swing.JButton btnOtro1;
     private javax.swing.JButton btnPresupuesto;
     private javax.swing.JButton btnReporte;
+    private javax.swing.JButton btnServicios;
     private javax.swing.JButton btnTelefono;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblAnalisis;
     private javax.swing.JLabel lblArchivo;
     private javax.swing.JLabel lblCedula;
+    private javax.swing.JLabel lblCedulaUsuario;
+    private javax.swing.JLabel lblCodRecibo;
+    private javax.swing.JLabel lblConsultaCliente;
+    private javax.swing.JLabel lblConsultaRecibo;
+    private javax.swing.JLabel lblConsultaUsuario;
+    private javax.swing.JLabel lblEstadoRecibo;
     private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblNombreUsuario;
     private javax.swing.JLabel lblOpciones;
     private javax.swing.JLabel lblReporte;
     private javax.swing.JLabel lblServicio;
     private javax.swing.JTextField txtCedula;
+    private javax.swing.JTextField txtCedulaUsuario;
+    private javax.swing.JTextField txtCodRecibo;
     // End of variables declaration//GEN-END:variables
 }

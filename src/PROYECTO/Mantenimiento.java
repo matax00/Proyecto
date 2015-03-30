@@ -5,35 +5,24 @@
  */
 package PROYECTO;
 
-import java.awt.Image;
 import java.awt.MouseInfo;
 import java.awt.Point;
-import java.awt.Toolkit;
 
 /**
  *
- * @author FerSo
+ * @author FerSotox
  */
-public class Cobrar extends javax.swing.JFrame {
+public class Mantenimiento extends javax.swing.JFrame {
 
     /**
-     * Creates new form Cobrar
+     * Creates new form Mantenimiento
      */
-    public Cobrar() {
-        setUndecorated(true);
+    public Mantenimiento() {
+        this.setUndecorated(true);
         initComponents();
     }
-int x,y;
 
-
- @Override
-   public Image getIconImage() {
-        Image imagen = Toolkit.getDefaultToolkit().
-                getImage(ClassLoader.getSystemResource("iconos/icono.png"));
-
-
-        return imagen;
-    }
+    int x,y;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -44,7 +33,7 @@ int x,y;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        lblCobro = new javax.swing.JLabel();
+        lblNoReparados = new javax.swing.JLabel();
         casa = new javax.swing.JButton();
         FONDO = new javax.swing.JLabel();
 
@@ -60,13 +49,12 @@ int x,y;
                 jPanel1MouseEntered(evt);
             }
         });
-        jPanel1.setLayout(null);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblCobro.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
-        lblCobro.setForeground(new java.awt.Color(204, 255, 255));
-        lblCobro.setText("Cobro y Entrega");
-        jPanel1.add(lblCobro);
-        lblCobro.setBounds(10, 10, 430, 50);
+        lblNoReparados.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
+        lblNoReparados.setForeground(new java.awt.Color(204, 255, 255));
+        lblNoReparados.setText("Mantenimiento");
+        jPanel1.add(lblNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 370, 50));
 
         casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inicio.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");
@@ -80,8 +68,7 @@ int x,y;
                 casaActionPerformed(evt);
             }
         });
-        jPanel1.add(casa);
-        casa.setBounds(600, 480, 80, 90);
+        jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 480, -1, 90));
 
         FONDO.setBackground(new java.awt.Color(204, 204, 204));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -101,8 +88,7 @@ int x,y;
                 FONDOKeyPressed(evt);
             }
         });
-        jPanel1.add(FONDO);
-        FONDO.setBounds(0, 0, 700, 580);
+        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 580));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 580));
 
@@ -150,20 +136,20 @@ int x,y;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Cobrar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mantenimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Cobrar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mantenimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Cobrar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mantenimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Cobrar.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Mantenimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Cobrar().setVisible(true);
+                new Mantenimiento().setVisible(true);
             }
         });
     }
@@ -172,6 +158,6 @@ int x,y;
     private javax.swing.JLabel FONDO;
     private javax.swing.JButton casa;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblCobro;
+    private javax.swing.JLabel lblNoReparados;
     // End of variables declaration//GEN-END:variables
 }
