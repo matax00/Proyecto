@@ -41,8 +41,11 @@ int x,y;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         lblNoReparados = new javax.swing.JLabel();
         casa = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         FONDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,10 +62,45 @@ int x,y;
         });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Tipo", "Marca", "Modelo", "Falla"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 90, 550, 370));
+
         lblNoReparados.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
         lblNoReparados.setForeground(new java.awt.Color(204, 255, 255));
         lblNoReparados.setText("Equipos No Reparados");
-        jPanel1.add(lblNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 560, 50));
+        jPanel1.add(lblNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 560, 50));
 
         casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inicio.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");
@@ -77,6 +115,15 @@ int x,y;
             }
         });
         jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 480, -1, 90));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/print_64.png"))); // NOI18N
+        jButton1.setToolTipText("Imprimir");
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setFocusPainted(false);
+        jButton1.setFocusable(false);
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 480, 90, 70));
 
         FONDO.setBackground(new java.awt.Color(204, 204, 204));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -165,7 +212,10 @@ int x,y;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FONDO;
     private javax.swing.JButton casa;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblNoReparados;
     // End of variables declaration//GEN-END:variables
 }

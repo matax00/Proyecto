@@ -19,11 +19,9 @@ public class PruebaBotones {
    
     
     public static void main(String[] args) {
-        Inicio i=new Inicio();
+        Principal prin=new Principal();
+        prin.setVisible(true);
         
-        i.setResizable(false);
-        i.setLocationRelativeTo(null);
-        i.setVisible(true);
       
         
       

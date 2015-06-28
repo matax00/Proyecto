@@ -33,6 +33,13 @@ public class Ingresos extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        lblCantidad1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        bolivares = new javax.swing.JTextField();
+        lblDescripcion = new javax.swing.JLabel();
+        lblCantidad = new javax.swing.JLabel();
         lblNoReparados = new javax.swing.JLabel();
         casa = new javax.swing.JButton();
         FONDO = new javax.swing.JLabel();
@@ -51,10 +58,39 @@ public class Ingresos extends javax.swing.JFrame {
         });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 320, 120));
+
+        lblCantidad1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblCantidad1.setForeground(new java.awt.Color(204, 255, 255));
+        lblCantidad1.setText("Bsf");
+        jPanel1.add(lblCantidad1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 50, 60));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar-archivo-icono-6713-64.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setFocusPainted(false);
+        jButton1.setFocusable(false);
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 210, 70, 60));
+        jPanel1.add(bolivares, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 90, 30));
+
+        lblDescripcion.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblDescripcion.setForeground(new java.awt.Color(204, 255, 255));
+        lblDescripcion.setText("Dinero Ingresado");
+        jPanel1.add(lblDescripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 220, 60));
+
+        lblCantidad.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblCantidad.setForeground(new java.awt.Color(204, 255, 255));
+        lblCantidad.setText("Descripción");
+        jPanel1.add(lblCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 220, 60));
+
         lblNoReparados.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
         lblNoReparados.setForeground(new java.awt.Color(204, 255, 255));
         lblNoReparados.setText("Ingresos");
-        jPanel1.add(lblNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 200, 60));
+        jPanel1.add(lblNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 230, 60));
 
         casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inicio.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");
@@ -68,7 +104,7 @@ public class Ingresos extends javax.swing.JFrame {
                 casaActionPerformed(evt);
             }
         });
-        jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 480, -1, 90));
+        jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, 60, 50));
 
         FONDO.setBackground(new java.awt.Color(204, 204, 204));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -88,9 +124,9 @@ public class Ingresos extends javax.swing.JFrame {
                 FONDOKeyPressed(evt);
             }
         });
-        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 580));
+        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 360));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 580));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 360));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -156,8 +192,15 @@ public class Ingresos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FONDO;
+    private javax.swing.JTextField bolivares;
     private javax.swing.JButton casa;
+    private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lblCantidad;
+    private javax.swing.JLabel lblCantidad1;
+    private javax.swing.JLabel lblDescripcion;
     private javax.swing.JLabel lblNoReparados;
     // End of variables declaration//GEN-END:variables
 }

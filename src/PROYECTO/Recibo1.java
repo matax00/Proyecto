@@ -1,19 +1,28 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package PROYECTO;
 
 import java.awt.MouseInfo;
 import java.awt.Point;
 
+/**
+ *
+ * @author FerSotox
+ */
+public class Recibo1 extends javax.swing.JFrame {
 
-public class EliminarInv extends javax.swing.JFrame {
-
-    
-    public EliminarInv() {
-        setUndecorated(true);
+    /**
+     * Creates new form Recibo1
+     */
+    public Recibo1() {
+        this.setUndecorated(true);
         initComponents();
     }
-    int x,y;
 
+    int x,y;
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -24,17 +33,16 @@ public class EliminarInv extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        lblCobro = new javax.swing.JLabel();
+        lblNoReparados = new javax.swing.JLabel();
         casa = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        txtCodPro = new javax.swing.JTextField();
-        txtNombPro = new javax.swing.JTextField();
-        txtPrecio = new javax.swing.JTextField();
-        txtCantidad = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        lblNombreCliente = new javax.swing.JLabel();
+        lblTipoServicio = new javax.swing.JLabel();
+        lblEquipo = new javax.swing.JLabel();
+        cliente = new javax.swing.JLabel();
+        lblNoReparados5 = new javax.swing.JLabel();
+        lblNoReparados6 = new javax.swing.JLabel();
+        Estado = new javax.swing.JLabel();
+        lblEstadoservicio = new javax.swing.JLabel();
         FONDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,15 +57,14 @@ public class EliminarInv extends javax.swing.JFrame {
                 jPanel1MouseEntered(evt);
             }
         });
-        jPanel1.setLayout(null);
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblCobro.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
-        lblCobro.setForeground(new java.awt.Color(204, 255, 255));
-        lblCobro.setText("Eliminar Inventario ");
-        jPanel1.add(lblCobro);
-        lblCobro.setBounds(70, 30, 470, 50);
+        lblNoReparados.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
+        lblNoReparados.setForeground(new java.awt.Color(204, 255, 255));
+        lblNoReparados.setText("Datos del servicio");
+        jPanel1.add(lblNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 420, 50));
 
-        casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/home_48.png"))); // NOI18N
+        casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inicio.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");
         casa.setBorderPainted(false);
         casa.setContentAreaFilled(false);
@@ -69,56 +76,47 @@ public class EliminarInv extends javax.swing.JFrame {
                 casaActionPerformed(evt);
             }
         });
-        jPanel1.add(casa);
-        casa.setBounds(510, 390, 80, 90);
+        jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 500, 80, 80));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Cod. Producto");
-        jPanel1.add(jLabel1);
-        jLabel1.setBounds(90, 170, 170, 22);
+        lblNombreCliente.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblNombreCliente.setForeground(new java.awt.Color(204, 255, 255));
+        lblNombreCliente.setText("Luis Guedez");
+        jPanel1.add(lblNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 260, 50));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Nombre Producto");
-        jPanel1.add(jLabel2);
-        jLabel2.setBounds(90, 210, 170, 22);
+        lblTipoServicio.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblTipoServicio.setForeground(new java.awt.Color(204, 255, 255));
+        lblTipoServicio.setText("Reparacion de Computadora");
+        jPanel1.add(lblTipoServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 320, 50));
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Precio");
-        jPanel1.add(jLabel3);
-        jLabel3.setBounds(90, 250, 170, 22);
+        lblEquipo.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblEquipo.setForeground(new java.awt.Color(204, 255, 255));
+        lblEquipo.setText("Escritorio  ");
+        jPanel1.add(lblEquipo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 280, 140, 50));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Cantidad");
-        jPanel1.add(jLabel4);
-        jLabel4.setBounds(90, 290, 170, 22);
+        cliente.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        cliente.setForeground(new java.awt.Color(204, 255, 255));
+        cliente.setText("Cliente");
+        jPanel1.add(cliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 210, 30));
 
-        txtCodPro.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jPanel1.add(txtCodPro);
-        txtCodPro.setBounds(310, 170, 170, 30);
+        lblNoReparados5.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblNoReparados5.setForeground(new java.awt.Color(204, 255, 255));
+        lblNoReparados5.setText("Tipo de servicio");
+        jPanel1.add(lblNoReparados5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 210, 30));
 
-        txtNombPro.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jPanel1.add(txtNombPro);
-        txtNombPro.setBounds(310, 210, 170, 30);
+        lblNoReparados6.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblNoReparados6.setForeground(new java.awt.Color(204, 255, 255));
+        lblNoReparados6.setText("Equipo");
+        jPanel1.add(lblNoReparados6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 210, 30));
 
-        txtPrecio.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jPanel1.add(txtPrecio);
-        txtPrecio.setBounds(310, 250, 170, 30);
+        Estado.setFont(new java.awt.Font("Tempus Sans ITC", 3, 36)); // NOI18N
+        Estado.setForeground(new java.awt.Color(204, 255, 255));
+        Estado.setText("Estado de servicio");
+        jPanel1.add(Estado, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, 330, 50));
 
-        txtCantidad.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jPanel1.add(txtCantidad);
-        txtCantidad.setBounds(310, 290, 170, 30);
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Inventario/eliminar-icono-4614-48.png"))); // NOI18N
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setFocusPainted(false);
-        jButton1.setFocusable(false);
-        jPanel1.add(jButton1);
-        jButton1.setBounds(400, 330, 80, 60);
+        lblEstadoservicio.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblEstadoservicio.setForeground(new java.awt.Color(204, 255, 255));
+        lblEstadoservicio.setText("No Realizado");
+        jPanel1.add(lblEstadoservicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 470, 180, 50));
 
         FONDO.setBackground(new java.awt.Color(204, 204, 204));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -138,10 +136,9 @@ public class EliminarInv extends javax.swing.JFrame {
                 FONDOKeyPressed(evt);
             }
         });
-        jPanel1.add(FONDO);
-        FONDO.setBounds(0, 0, 600, 480);
+        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 570));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 1, 600, 480));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -187,37 +184,36 @@ public class EliminarInv extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EliminarInv.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Recibo1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EliminarInv.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Recibo1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EliminarInv.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Recibo1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EliminarInv.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Recibo1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new EliminarInv().setVisible(true);
+                new Recibo1().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Estado;
     private javax.swing.JLabel FONDO;
     private javax.swing.JButton casa;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel cliente;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblCobro;
-    private javax.swing.JTextField txtCantidad;
-    private javax.swing.JTextField txtCodPro;
-    private javax.swing.JTextField txtNombPro;
-    private javax.swing.JTextField txtPrecio;
+    private javax.swing.JLabel lblEquipo;
+    private javax.swing.JLabel lblEstadoservicio;
+    private javax.swing.JLabel lblNoReparados;
+    private javax.swing.JLabel lblNoReparados5;
+    private javax.swing.JLabel lblNoReparados6;
+    private javax.swing.JLabel lblNombreCliente;
+    private javax.swing.JLabel lblTipoServicio;
     // End of variables declaration//GEN-END:variables
 }

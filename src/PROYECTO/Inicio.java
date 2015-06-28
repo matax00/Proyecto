@@ -240,6 +240,9 @@ Cerrar.setBorderPainted(false);
         // TODO add your handling code here:
     }//GEN-LAST:event_pwrContraseñaActionPerformed
 
+    
+    
+    
     private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
         
         

@@ -37,9 +37,8 @@ int x,y;
         jPanel1 = new javax.swing.JPanel();
         lblContabilidad = new javax.swing.JLabel();
         casa = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        btnBuscar = new javax.swing.JButton();
+        btnIngresos = new javax.swing.JButton();
+        btnEgresos = new javax.swing.JButton();
         btnImprimir = new javax.swing.JButton();
         FONDO = new javax.swing.JLabel();
 
@@ -61,7 +60,7 @@ int x,y;
         lblContabilidad.setForeground(new java.awt.Color(204, 255, 255));
         lblContabilidad.setText("Contabilidad ");
         jPanel1.add(lblContabilidad);
-        lblContabilidad.setBounds(210, 10, 340, 50);
+        lblContabilidad.setBounds(90, 20, 340, 50);
 
         casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/home_48.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");
@@ -76,77 +75,39 @@ int x,y;
             }
         });
         jPanel1.add(casa);
-        casa.setBounds(620, 510, 60, 60);
+        casa.setBounds(410, 280, 60, 60);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Fecha", "Descripcion", "Activos", "Descripcion", "Pasivos", "Capital"
+        btnIngresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ingreso.png"))); // NOI18N
+        btnIngresos.setToolTipText("Reporte de Ingresos");
+        btnIngresos.setBorderPainted(false);
+        btnIngresos.setContentAreaFilled(false);
+        btnIngresos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnIngresos.setFocusPainted(false);
+        btnIngresos.setFocusable(false);
+        btnIngresos.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ingreso_p.png"))); // NOI18N
+        btnIngresos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIngresosActionPerformed(evt);
             }
-        ));
-        jScrollPane1.setViewportView(jTable1);
+        });
+        jPanel1.add(btnIngresos);
+        btnIngresos.setBounds(270, 110, 160, 136);
 
-        jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(50, 90, 600, 350);
-
-        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Inventario/buscar-buscar-ampliar-icono-9630-48.png"))); // NOI18N
-        btnBuscar.setBorderPainted(false);
-        btnBuscar.setContentAreaFilled(false);
-        btnBuscar.setFocusPainted(false);
-        btnBuscar.setFocusable(false);
-        jPanel1.add(btnBuscar);
-        btnBuscar.setBounds(240, 480, 100, 50);
+        btnEgresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/egreso.png"))); // NOI18N
+        btnEgresos.setToolTipText("Reporte de Egresos");
+        btnEgresos.setBorderPainted(false);
+        btnEgresos.setContentAreaFilled(false);
+        btnEgresos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEgresos.setFocusPainted(false);
+        btnEgresos.setFocusable(false);
+        btnEgresos.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/egreso_p.png"))); // NOI18N
+        btnEgresos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEgresosActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnEgresos);
+        btnEgresos.setBounds(70, 120, 160, 136);
 
         btnImprimir.setBorderPainted(false);
         btnImprimir.setContentAreaFilled(false);
@@ -174,9 +135,9 @@ int x,y;
             }
         });
         jPanel1.add(FONDO);
-        FONDO.setBounds(0, 0, 700, 580);
+        FONDO.setBounds(0, 0, 480, 350);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 580));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 350));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -204,6 +165,22 @@ int x,y;
     private void jPanel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1MouseEntered
+
+    private void btnIngresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresosActionPerformed
+        Ingresos in=new Ingresos();
+
+        in.setResizable(false);
+        in.setLocationRelativeTo(null);
+        in.setVisible(true);
+    }//GEN-LAST:event_btnIngresosActionPerformed
+
+    private void btnEgresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEgresosActionPerformed
+        Egresos egr=new Egresos();
+
+        egr.setResizable(false);
+        egr.setLocationRelativeTo(null);
+        egr.setVisible(true);
+    }//GEN-LAST:event_btnEgresosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,12 +219,11 @@ int x,y;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FONDO;
-    private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnEgresos;
     private javax.swing.JButton btnImprimir;
+    private javax.swing.JButton btnIngresos;
     private javax.swing.JButton casa;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblContabilidad;
     // End of variables declaration//GEN-END:variables
 }

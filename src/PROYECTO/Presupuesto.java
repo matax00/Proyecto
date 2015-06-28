@@ -121,7 +121,7 @@ int x,y;
         jPanel3.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 110, 20));
 
         jPanel1.add(jPanel3);
-        jPanel3.setBounds(40, 400, 330, 140);
+        jPanel3.setBounds(40, 390, 330, 140);
 
         casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inicio.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");

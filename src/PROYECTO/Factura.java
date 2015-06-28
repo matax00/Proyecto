@@ -44,8 +44,27 @@ int x,y;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        lblCobro = new javax.swing.JLabel();
+        lblNombre = new javax.swing.JLabel();
+        lblCedula = new javax.swing.JLabel();
+        lblPresupuesto = new javax.swing.JLabel();
+        atras = new javax.swing.JButton();
+        btnBuscarCliente = new javax.swing.JButton();
+        txtCedula = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         casa = new javax.swing.JButton();
+        btnImprimir = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        btnAgregar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox();
+        btnAgregar1 = new javax.swing.JButton();
         FONDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,11 +81,65 @@ int x,y;
         });
         jPanel1.setLayout(null);
 
-        lblCobro.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
-        lblCobro.setForeground(new java.awt.Color(204, 255, 255));
-        lblCobro.setText("Facturación");
-        jPanel1.add(lblCobro);
-        lblCobro.setBounds(10, 10, 430, 50);
+        lblNombre.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        lblNombre.setForeground(new java.awt.Color(204, 255, 255));
+        jPanel1.add(lblNombre);
+        lblNombre.setBounds(400, 90, 180, 30);
+
+        lblCedula.setFont(new java.awt.Font("Tempus Sans ITC", 1, 18)); // NOI18N
+        lblCedula.setForeground(new java.awt.Color(204, 255, 255));
+        jPanel1.add(lblCedula);
+        lblCedula.setBounds(400, 130, 180, 30);
+
+        lblPresupuesto.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
+        lblPresupuesto.setForeground(new java.awt.Color(204, 255, 255));
+        lblPresupuesto.setText("Facturacion");
+        jPanel1.add(lblPresupuesto);
+        lblPresupuesto.setBounds(180, 20, 280, 50);
+
+        atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Inventario/regresar-icono-6105-48.png"))); // NOI18N
+        atras.setBorderPainted(false);
+        atras.setContentAreaFilled(false);
+        atras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        atras.setFocusPainted(false);
+        atras.setFocusable(false);
+        atras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                atrasActionPerformed(evt);
+            }
+        });
+        jPanel1.add(atras);
+        atras.setBounds(500, 430, 60, 50);
+
+        btnBuscarCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Buscar.png"))); // NOI18N
+        btnBuscarCliente.setToolTipText("Buscar");
+        btnBuscarCliente.setBorderPainted(false);
+        btnBuscarCliente.setContentAreaFilled(false);
+        btnBuscarCliente.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBuscarCliente.setFocusPainted(false);
+        btnBuscarCliente.setFocusable(false);
+        btnBuscarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarClienteActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBuscarCliente);
+        btnBuscarCliente.setBounds(260, 96, 60, 50);
+
+        txtCedula.setToolTipText("Ingrese Cedula");
+        txtCedula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCedulaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtCedula);
+        txtCedula.setBounds(40, 110, 200, 30);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Buscar Cliente");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(40, 80, 130, 30);
 
         casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inicio.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");
@@ -81,7 +154,125 @@ int x,y;
             }
         });
         jPanel1.add(casa);
-        casa.setBounds(600, 480, 80, 90);
+        casa.setBounds(600, 430, 60, 50);
+
+        btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Inventario/hola.png"))); // NOI18N
+        btnImprimir.setBorderPainted(false);
+        btnImprimir.setContentAreaFilled(false);
+        btnImprimir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnImprimir.setFocusPainted(false);
+        btnImprimir.setFocusable(false);
+        jPanel1.add(btnImprimir);
+        btnImprimir.setBounds(410, 420, 60, 60);
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true), "Producto y cantidad", javax.swing.border.TitledBorder.RIGHT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel2.setOpaque(false);
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Selecione producto");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 160, 40));
+
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione", "camara", "Teclado", "Raton", "Flex" }));
+        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 190, 30));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Cantidad");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 70, 40));
+        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 100, 90, 30));
+
+        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Agregar.png"))); // NOI18N
+        btnAgregar.setBorderPainted(false);
+        btnAgregar.setContentAreaFilled(false);
+        btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAgregar.setFocusPainted(false);
+        btnAgregar.setFocusable(false);
+        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 60, 50));
+
+        jPanel1.add(jPanel2);
+        jPanel2.setBounds(30, 180, 330, 140);
+
+        jTable1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Producto", "Cantidad", "Precio"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel1.add(jScrollPane1);
+        jScrollPane1.setBounds(380, 190, 270, 200);
+
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true), "Servicio", javax.swing.border.TitledBorder.RIGHT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel4.setOpaque(false);
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Selecione Servicio");
+        jPanel4.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 160, 40));
+
+        jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione", "Computadora", "Telefono", "Impresora" }));
+        jComboBox2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 190, 30));
+
+        btnAgregar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Agregar.png"))); // NOI18N
+        btnAgregar1.setBorderPainted(false);
+        btnAgregar1.setContentAreaFilled(false);
+        btnAgregar1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAgregar1.setFocusPainted(false);
+        btnAgregar1.setFocusable(false);
+        jPanel4.add(btnAgregar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, 60, 50));
+
+        jPanel1.add(jPanel4);
+        jPanel4.setBounds(30, 340, 330, 140);
 
         FONDO.setBackground(new java.awt.Color(204, 204, 204));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -102,16 +293,25 @@ int x,y;
             }
         });
         jPanel1.add(FONDO);
-        FONDO.setBounds(0, 0, 700, 580);
+        FONDO.setBounds(0, 0, 680, 500);
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 580));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
+
+        dispose();        // TODO add your handling code here:
+    }//GEN-LAST:event_atrasActionPerformed
+
     private void casaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_casaActionPerformed
         dispose();
     }//GEN-LAST:event_casaActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void FONDOMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_FONDOMouseDragged
 
@@ -132,6 +332,23 @@ int x,y;
     private void jPanel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1MouseEntered
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
+
+    private void txtCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCedulaActionPerformed
+
+    private void btnBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarClienteActionPerformed
+       if(txtCedula.getText().equals("21055053")){
+           lblCedula.setText("21055053");
+           lblNombre.setText("Hember Colmenares");
+       }
+        
+        
+    }//GEN-LAST:event_btnBuscarClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -171,8 +388,27 @@ int x,y;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FONDO;
+    private javax.swing.JButton atras;
+    private javax.swing.JButton btnAgregar;
+    private javax.swing.JButton btnAgregar1;
+    private javax.swing.JButton btnBuscarCliente;
+    private javax.swing.JButton btnImprimir;
     private javax.swing.JButton casa;
+    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox jComboBox2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblCobro;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel lblCedula;
+    private javax.swing.JLabel lblNombre;
+    private javax.swing.JLabel lblPresupuesto;
+    private javax.swing.JTextField txtCedula;
     // End of variables declaration//GEN-END:variables
 }

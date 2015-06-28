@@ -33,6 +33,9 @@ public class Mantenimiento extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        btnRespaldo = new javax.swing.JButton();
+        btnRestaurar = new javax.swing.JButton();
+        btnBitacora = new javax.swing.JButton();
         lblNoReparados = new javax.swing.JLabel();
         casa = new javax.swing.JButton();
         FONDO = new javax.swing.JLabel();
@@ -51,6 +54,36 @@ public class Mantenimiento extends javax.swing.JFrame {
         });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnRespaldo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/respaldo.png"))); // NOI18N
+        btnRespaldo.setToolTipText("Crear Respaldo");
+        btnRespaldo.setBorderPainted(false);
+        btnRespaldo.setContentAreaFilled(false);
+        btnRespaldo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRespaldo.setFocusPainted(false);
+        btnRespaldo.setFocusable(false);
+        btnRespaldo.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/respaldo_p.png"))); // NOI18N
+        jPanel1.add(btnRespaldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, 160, 140));
+
+        btnRestaurar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/restaurar.png"))); // NOI18N
+        btnRestaurar.setToolTipText("Restaurar Sistema");
+        btnRestaurar.setBorderPainted(false);
+        btnRestaurar.setContentAreaFilled(false);
+        btnRestaurar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRestaurar.setFocusPainted(false);
+        btnRestaurar.setFocusable(false);
+        btnRestaurar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/restaurar_p.png"))); // NOI18N
+        jPanel1.add(btnRestaurar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 130, 160, 140));
+
+        btnBitacora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/bitacora.png"))); // NOI18N
+        btnBitacora.setToolTipText("Registro de eventos");
+        btnBitacora.setBorderPainted(false);
+        btnBitacora.setContentAreaFilled(false);
+        btnBitacora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnBitacora.setFocusPainted(false);
+        btnBitacora.setFocusable(false);
+        btnBitacora.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/bitacora_p.png"))); // NOI18N
+        jPanel1.add(btnBitacora, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 160, 140));
+
         lblNoReparados.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
         lblNoReparados.setForeground(new java.awt.Color(204, 255, 255));
         lblNoReparados.setText("Mantenimiento");
@@ -68,7 +101,7 @@ public class Mantenimiento extends javax.swing.JFrame {
                 casaActionPerformed(evt);
             }
         });
-        jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 480, -1, 90));
+        jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 430, -1, 90));
 
         FONDO.setBackground(new java.awt.Color(204, 204, 204));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -88,9 +121,9 @@ public class Mantenimiento extends javax.swing.JFrame {
                 FONDOKeyPressed(evt);
             }
         });
-        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 580));
+        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 520));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 580));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -156,6 +189,9 @@ public class Mantenimiento extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FONDO;
+    private javax.swing.JButton btnBitacora;
+    private javax.swing.JButton btnRespaldo;
+    private javax.swing.JButton btnRestaurar;
     private javax.swing.JButton casa;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblNoReparados;

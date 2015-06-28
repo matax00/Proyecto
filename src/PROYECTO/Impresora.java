@@ -32,8 +32,18 @@ int x,y;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        lblNoReparados3 = new javax.swing.JLabel();
+        lblNoReparados2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jTextField2 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        lblNoReparados1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jComboBox1 = new javax.swing.JComboBox();
         lblNoReparados = new javax.swing.JLabel();
         casa = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
         FONDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -50,10 +60,52 @@ int x,y;
         });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblNoReparados3.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblNoReparados3.setForeground(new java.awt.Color(204, 255, 255));
+        lblNoReparados3.setText("Descripcion de falla");
+        jPanel1.add(lblNoReparados3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 280, 250, 40));
+
+        lblNoReparados2.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblNoReparados2.setForeground(new java.awt.Color(204, 255, 255));
+        lblNoReparados2.setText("Modelo");
+        jPanel1.add(lblNoReparados2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 190, 140, 40));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/guardar-archivo-icono-6713-64.png"))); // NOI18N
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setFocusPainted(false);
+        jButton1.setFocusable(false);
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 440, 70, 60));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 240, 250, 40));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 320, 500, 110));
+
+        lblNoReparados1.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        lblNoReparados1.setForeground(new java.awt.Color(204, 255, 255));
+        lblNoReparados1.setText("Marca");
+        jPanel1.add(lblNoReparados1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 80, 40));
+
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true), "Seleccione Tipo", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 2, 14), new java.awt.Color(255, 255, 255))); // NOI18N
+        jPanel2.setOpaque(false);
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jComboBox1.setForeground(new java.awt.Color(153, 153, 153));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccione", "Impresora", "Multifuncional" }));
+        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 160, 40));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, 210, 150));
+
         lblNoReparados.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
         lblNoReparados.setForeground(new java.awt.Color(204, 255, 255));
         lblNoReparados.setText("Impresora");
-        jPanel1.add(lblNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 240, 50));
+        jPanel1.add(lblNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 240, 50));
 
         casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inicio.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");
@@ -67,7 +119,10 @@ int x,y;
                 casaActionPerformed(evt);
             }
         });
-        jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 480, -1, 90));
+        jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 450, 50, 50));
+
+        jTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 130, 250, 40));
 
         FONDO.setBackground(new java.awt.Color(204, 204, 204));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -87,9 +142,9 @@ int x,y;
                 FONDOKeyPressed(evt);
             }
         });
-        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 580));
+        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 510));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 580));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -156,7 +211,17 @@ int x,y;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FONDO;
     private javax.swing.JButton casa;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lblNoReparados;
+    private javax.swing.JLabel lblNoReparados1;
+    private javax.swing.JLabel lblNoReparados2;
+    private javax.swing.JLabel lblNoReparados3;
     // End of variables declaration//GEN-END:variables
 }

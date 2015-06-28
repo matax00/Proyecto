@@ -29,7 +29,7 @@ public class Computadora extends javax.swing.JFrame {
         panel.setVisible(false);
         Si.setVisible(false);
         No.setVisible(false);
-        unidaddvd.setVisible(false);
+       
         txtversion.setVisible(false);
         txtram.setVisible(false);
         txtcpu.setVisible(false);
@@ -47,7 +47,8 @@ public class Computadora extends javax.swing.JFrame {
         txtdistribuciones.setVisible(false);
         btnCompu.setBorderPainted(false);
         btnLapto.setBorderPainted(false);
-        
+        descripcion.setVisible(false);
+        descrippcion.setVisible(false);
     }
  int x,y;
  
@@ -81,13 +82,14 @@ public class Computadora extends javax.swing.JFrame {
         proceador = new javax.swing.JLabel();
         sistemaOperativo = new javax.swing.JLabel();
         txtcpu = new javax.swing.JTextField();
+        descripcion = new javax.swing.JLabel();
         txtram = new javax.swing.JTextField();
         panel = new javax.swing.JPanel();
         Si = new javax.swing.JRadioButton();
         No = new javax.swing.JRadioButton();
-        unidaddvd = new javax.swing.JLabel();
         marca = new javax.swing.JLabel();
         modelo = new javax.swing.JLabel();
+        descrippcion = new javax.swing.JTextField();
         txtmodelo = new javax.swing.JTextField();
         txtmarca = new javax.swing.JTextField();
         txtdistribuciones = new javax.swing.JLabel();
@@ -115,7 +117,7 @@ public class Computadora extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         lblComputadora.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
-        lblComputadora.setForeground(new java.awt.Color(204, 255, 255));
+        lblComputadora.setForeground(new java.awt.Color(255, 255, 255));
         lblComputadora.setText("Computadora ");
         jPanel1.add(lblComputadora);
         lblComputadora.setBounds(10, 10, 370, 50);
@@ -139,25 +141,25 @@ public class Computadora extends javax.swing.JFrame {
         seleccion.setForeground(new java.awt.Color(255, 255, 255));
         seleccion.setText("Seleccione Tipo");
         jPanel1.add(seleccion);
-        seleccion.setBounds(320, 290, 270, 60);
+        seleccion.setBounds(290, 290, 270, 60);
 
         txtlaptop.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         txtlaptop.setForeground(new java.awt.Color(255, 255, 255));
         txtlaptop.setText("Laptop");
         jPanel1.add(txtlaptop);
-        txtlaptop.setBounds(330, 80, 130, 40);
+        txtlaptop.setBounds(280, 80, 130, 40);
 
         txtescritorio.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         txtescritorio.setForeground(new java.awt.Color(255, 255, 255));
         txtescritorio.setText("Escritorio");
         jPanel1.add(txtescritorio);
-        txtescritorio.setBounds(310, 80, 220, 40);
+        txtescritorio.setBounds(260, 80, 220, 40);
 
         memoriaRam.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         memoriaRam.setForeground(new java.awt.Color(255, 255, 255));
         memoriaRam.setText("Memoria RAM");
         jPanel1.add(memoriaRam);
-        memoriaRam.setBounds(250, 300, 130, 30);
+        memoriaRam.setBounds(230, 280, 130, 30);
 
         comboSO.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         comboSO.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Seleccionar", "Windows", "Linux", "Mac" }));
@@ -167,92 +169,94 @@ public class Computadora extends javax.swing.JFrame {
             }
         });
         jPanel1.add(comboSO);
-        comboSO.setBounds(390, 230, 130, 30);
+        comboSO.setBounds(370, 210, 130, 30);
 
         txtversion.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtversion.setForeground(new java.awt.Color(255, 255, 255));
         txtversion.setText("Version");
         jPanel1.add(txtversion);
-        txtversion.setBounds(560, 200, 70, 30);
+        txtversion.setBounds(540, 180, 70, 30);
 
         comboMac.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Leopard", "Snow Leopard", "Lion", "Mountain Lion", "Mavericks", "Yosemite" }));
         jPanel1.add(comboMac);
-        comboMac.setBounds(530, 230, 150, 30);
+        comboMac.setBounds(510, 210, 150, 30);
 
         proceador.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         proceador.setForeground(new java.awt.Color(255, 255, 255));
         proceador.setText("Procesador (CPU)");
         jPanel1.add(proceador);
-        proceador.setBounds(250, 360, 150, 30);
+        proceador.setBounds(230, 330, 150, 30);
 
         sistemaOperativo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         sistemaOperativo.setForeground(new java.awt.Color(255, 255, 255));
         sistemaOperativo.setText("Sistema Operativo");
         jPanel1.add(sistemaOperativo);
-        sistemaOperativo.setBounds(240, 230, 150, 30);
+        sistemaOperativo.setBounds(220, 210, 150, 30);
 
         txtcpu.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(txtcpu);
-        txtcpu.setBounds(400, 350, 150, 30);
+        txtcpu.setBounds(380, 330, 130, 30);
+
+        descripcion.setFont(new java.awt.Font("Tempus Sans ITC", 1, 24)); // NOI18N
+        descripcion.setForeground(new java.awt.Color(204, 255, 255));
+        descripcion.setText("Descripcion de falla");
+        jPanel1.add(descripcion);
+        descripcion.setBounds(230, 390, 210, 33);
 
         txtram.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(txtram);
-        txtram.setBounds(400, 290, 150, 30);
+        txtram.setBounds(350, 280, 160, 30);
 
-        panel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        panel.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true), "Unidad de DVD", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 3, 14), new java.awt.Color(255, 255, 255))); // NOI18N
         panel.setOpaque(false);
         panel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         buttonGroup1.add(Si);
         Si.setText("Si");
-        panel.add(Si, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
+        panel.add(Si, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
 
         buttonGroup1.add(No);
         No.setText("No");
-        panel.add(No, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 40, -1, -1));
-
-        unidaddvd.setBackground(new java.awt.Color(255, 255, 255));
-        unidaddvd.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        unidaddvd.setForeground(new java.awt.Color(255, 255, 255));
-        unidaddvd.setText("Posee Unidad CD/DVD");
-        panel.add(unidaddvd, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 0, 190, 40));
+        panel.add(No, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, -1));
 
         jPanel1.add(panel);
-        panel.setBounds(280, 410, 290, 80);
+        panel.setBounds(530, 280, 130, 80);
 
         marca.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         marca.setForeground(new java.awt.Color(255, 255, 255));
         marca.setText("Marca");
         jPanel1.add(marca);
-        marca.setBounds(250, 160, 70, 30);
+        marca.setBounds(230, 140, 70, 30);
 
         modelo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         modelo.setForeground(new java.awt.Color(255, 255, 255));
         modelo.setText("Modelo");
         jPanel1.add(modelo);
-        modelo.setBounds(460, 160, 70, 30);
+        modelo.setBounds(440, 140, 70, 30);
+        jPanel1.add(descrippcion);
+        descrippcion.setBounds(230, 430, 420, 70);
 
         txtmodelo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(txtmodelo);
-        txtmodelo.setBounds(530, 160, 120, 30);
+        txtmodelo.setBounds(510, 140, 120, 30);
 
         txtmarca.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jPanel1.add(txtmarca);
-        txtmarca.setBounds(310, 160, 120, 30);
+        txtmarca.setBounds(290, 140, 120, 30);
 
         txtdistribuciones.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtdistribuciones.setForeground(new java.awt.Color(255, 255, 255));
         txtdistribuciones.setText("Distribuciones");
         jPanel1.add(txtdistribuciones);
-        txtdistribuciones.setBounds(540, 200, 130, 30);
+        txtdistribuciones.setBounds(520, 180, 130, 30);
 
         comboLinux.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Debian", "Ubuntu", "Canaima", "Kubuntu", "Knoppix", "Mandriva", "Gentoo", "OpenSuSe", "Fedora" }));
         jPanel1.add(comboLinux);
-        comboLinux.setBounds(530, 230, 150, 30);
+        comboLinux.setBounds(510, 210, 150, 30);
 
         comboWindows1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Windows 8 (64 bit)", "Windows 8 (32 bit)", "Windows 7 (64 bit)", "Windows 7 (32 bit)", "Windows vista (64 bit)", "Windows vista (32 bit)", "Windows XP (64 bit)", "Windows XP (32 bit)", "Windows 2000 (32 bit)", "Windows NT (32 bit)", "Windows 98 (32 bit)" }));
         jPanel1.add(comboWindows1);
-        comboWindows1.setBounds(530, 230, 150, 30);
+        comboWindows1.setBounds(510, 210, 150, 30);
 
         btnLapto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/computadora.png"))); // NOI18N
         btnLapto.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true));
@@ -268,7 +272,7 @@ public class Computadora extends javax.swing.JFrame {
         jPanel1.add(btnLapto);
         btnLapto.setBounds(20, 150, 180, 170);
 
-        btnCompu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/laptox.png"))); // NOI18N
+        btnCompu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/laptox.png"))); // NOI18N
         btnCompu.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true));
         btnCompu.setContentAreaFilled(false);
         btnCompu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -280,7 +284,7 @@ public class Computadora extends javax.swing.JFrame {
             }
         });
         jPanel1.add(btnCompu);
-        btnCompu.setBounds(20, 370, 180, 170);
+        btnCompu.setBounds(20, 340, 180, 170);
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/save_48.png"))); // NOI18N
         jButton2.setToolTipText("Guardar");
@@ -377,7 +381,8 @@ public class Computadora extends javax.swing.JFrame {
         panel.setVisible(true);
         Si.setVisible(true);
         No.setVisible(true);
-        unidaddvd.setVisible(true);
+       descripcion.setVisible(true);
+        descrippcion.setVisible(true);
         txtversion.setVisible(false);
         txtram.setVisible(true);
         txtcpu.setVisible(true);
@@ -404,7 +409,8 @@ public class Computadora extends javax.swing.JFrame {
         panel.setVisible(true);
         Si.setVisible(true);
         No.setVisible(true);
-        unidaddvd.setVisible(true);
+        descripcion.setVisible(true);
+        descrippcion.setVisible(true);
         txtversion.setVisible(false);
         txtram.setVisible(true);
         txtcpu.setVisible(true);
@@ -471,6 +477,8 @@ public class Computadora extends javax.swing.JFrame {
     private javax.swing.JComboBox comboMac;
     private javax.swing.JComboBox comboSO;
     private javax.swing.JComboBox comboWindows1;
+    private javax.swing.JLabel descripcion;
+    private javax.swing.JTextField descrippcion;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
@@ -490,6 +498,5 @@ public class Computadora extends javax.swing.JFrame {
     private javax.swing.JTextField txtmodelo;
     private javax.swing.JTextField txtram;
     private javax.swing.JLabel txtversion;
-    private javax.swing.JLabel unidaddvd;
     // End of variables declaration//GEN-END:variables
 }

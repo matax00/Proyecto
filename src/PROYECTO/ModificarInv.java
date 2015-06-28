@@ -61,7 +61,7 @@ public class ModificarInv extends javax.swing.JFrame {
         lblCobro.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
         lblCobro.setForeground(new java.awt.Color(204, 255, 255));
         lblCobro.setText("Modificar Inventario");
-        jPanel1.add(lblCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, -1, 50));
+        jPanel1.add(lblCobro, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, 50));
 
         casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inicio.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");
@@ -75,46 +75,46 @@ public class ModificarInv extends javax.swing.JFrame {
                 casaActionPerformed(evt);
             }
         });
-        jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 390, -1, 90));
+        jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, -1, 90));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Cod. Producto");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 140, 170, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 170, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Nombre Producto");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 170, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 170, -1));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Precio");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 170, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 170, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Cantidad");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 260, 170, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 170, -1));
 
         txtCodPro.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jPanel1.add(txtCodPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 170, 30));
+        jPanel1.add(txtCodPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, 170, 30));
 
         txtNombPro.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jPanel1.add(txtNombPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 170, 30));
+        jPanel1.add(txtNombPro, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 150, 170, 30));
 
         txtPrecio.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jPanel1.add(txtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 220, 170, 30));
+        jPanel1.add(txtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 190, 170, 30));
 
         txtCantidad.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jPanel1.add(txtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 260, 170, 30));
+        jPanel1.add(txtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 230, 170, 30));
 
         btnModificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Inventario/documento-de-modificar-el-archivo-de-papel-icono-4468-48.png"))); // NOI18N
         btnModificar.setBorderPainted(false);
         btnModificar.setContentAreaFilled(false);
         btnModificar.setFocusPainted(false);
         btnModificar.setFocusable(false);
-        jPanel1.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 320, -1, 60));
+        jPanel1.add(btnModificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, -1, 60));
 
         FONDO.setBackground(new java.awt.Color(204, 204, 204));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -134,9 +134,9 @@ public class ModificarInv extends javax.swing.JFrame {
                 FONDOKeyPressed(evt);
             }
         });
-        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 480));
+        jPanel1.add(FONDO, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 410));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 480));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 520, 410));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
