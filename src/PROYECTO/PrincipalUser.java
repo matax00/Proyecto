@@ -37,8 +37,6 @@ public class PrincipalUser extends javax.swing.JFrame {
         lblArchivo.setVisible(false);
         lblAnalisis.setVisible(false);
         lblNombre.setVisible(false);
-        
-        btnImpresora.setVisible(false);
         btnInsumos.setVisible(false);
         btnNoReparados.setVisible(false);
         btnIngresos.setVisible(false);
@@ -99,7 +97,6 @@ public class PrincipalUser extends javax.swing.JFrame {
         lblAnalisis = new javax.swing.JLabel();
         lblArchivo = new javax.swing.JLabel();
         lblNombre = new javax.swing.JLabel();
-        btnImpresora = new javax.swing.JButton();
         btnIngresos = new javax.swing.JButton();
         btnEgresos = new javax.swing.JButton();
         Warning = new javax.swing.JLabel();
@@ -291,7 +288,7 @@ public class PrincipalUser extends javax.swing.JFrame {
                 btnPresupuestoActionPerformed(evt);
             }
         });
-        jPanel2.add(btnPresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, 130, 130));
+        jPanel2.add(btnPresupuesto, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 130, 130));
 
         txtCedula.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtCedula.setToolTipText("");
@@ -343,21 +340,6 @@ public class PrincipalUser extends javax.swing.JFrame {
         lblNombre.setText("                     ");
         jPanel2.add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 330, 30));
 
-        btnImpresora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Impresora.png"))); // NOI18N
-        btnImpresora.setToolTipText("Impresora");
-        btnImpresora.setBorderPainted(false);
-        btnImpresora.setContentAreaFilled(false);
-        btnImpresora.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnImpresora.setFocusPainted(false);
-        btnImpresora.setFocusable(false);
-        btnImpresora.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Impresora_p.png"))); // NOI18N
-        btnImpresora.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnImpresoraActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnImpresora, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 330, 130, 130));
-
         btnIngresos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/ingreso.png"))); // NOI18N
         btnIngresos.setToolTipText("Ingresos");
         btnIngresos.setBorderPainted(false);
@@ -390,7 +372,7 @@ public class PrincipalUser extends javax.swing.JFrame {
 
         Warning.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/cancelar.png"))); // NOI18N
         Warning.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(Warning, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 420, 80, 80));
+        jPanel2.add(Warning, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 410, 80, 80));
 
         btnNoReparados.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Telefono.png"))); // NOI18N
         btnNoReparados.setToolTipText("Equipos No Reparados");
@@ -405,7 +387,7 @@ public class PrincipalUser extends javax.swing.JFrame {
                 btnNoReparadosActionPerformed(evt);
             }
         });
-        jPanel2.add(btnNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 120, 130));
+        jPanel2.add(btnNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 350, 120, 130));
 
         btnInsumos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/insumos.png"))); // NOI18N
         btnInsumos.setToolTipText("Insumos");
@@ -420,7 +402,7 @@ public class PrincipalUser extends javax.swing.JFrame {
                 btnInsumosActionPerformed(evt);
             }
         });
-        jPanel2.add(btnInsumos, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 390, 130, 120));
+        jPanel2.add(btnInsumos, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, 130, 120));
 
         Brothernologic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Imagen1.png"))); // NOI18N
         jPanel2.add(Brothernologic, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 380, 90));
@@ -576,8 +558,6 @@ public class PrincipalUser extends javax.swing.JFrame {
         lblArchivo.setVisible(true);
         lblAnalisis.setVisible(false);
         lblNombre.setVisible(false);
-     
-        btnImpresora.setVisible(false);
         btnInsumos.setVisible(false);
         btnNoReparados.setVisible(false);
         btnIngresos.setVisible(false);
@@ -616,8 +596,6 @@ public class PrincipalUser extends javax.swing.JFrame {
         lblArchivo.setVisible(false);
         lblAnalisis.setVisible(true);
         lblNombre.setVisible(false);
-        
-        btnImpresora.setVisible(false);
         btnInsumos.setVisible(true);
         btnNoReparados.setVisible(true);
         btnIngresos.setVisible(true);
@@ -658,8 +636,6 @@ public class PrincipalUser extends javax.swing.JFrame {
         lblAnalisis.setVisible(false);
         lblArchivo.setVisible(false);
         lblNombre.setVisible(false);
-        
-        btnImpresora.setVisible(false);
         btnInsumos.setVisible(false);
         btnNoReparados.setVisible(false);
         btnIngresos.setVisible(false);
@@ -722,14 +698,6 @@ public class PrincipalUser extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnAcercaActionPerformed
 
-    private void btnImpresoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImpresoraActionPerformed
-        Impresora im=new Impresora();
-                
-        im.setResizable(false);
-        im.setLocationRelativeTo(null);
-        im.setVisible(true);
-    }//GEN-LAST:event_btnImpresoraActionPerformed
-
     private void btnIngresosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIngresosActionPerformed
         Ingresos in=new Ingresos();
                 
@@ -777,8 +745,6 @@ public class PrincipalUser extends javax.swing.JFrame {
         lblArchivo.setVisible(false);
         lblAnalisis.setVisible(false);
         lblNombre.setVisible(false);
-       
-        btnImpresora.setVisible(true);
         btnInsumos.setVisible(false);
         btnNoReparados.setVisible(false);
         btnIngresos.setVisible(false);
@@ -928,7 +894,6 @@ try {
     private javax.swing.JButton btnComputadora;
     private javax.swing.JButton btnEgresos;
     private javax.swing.JButton btnEstatus;
-    private javax.swing.JButton btnImpresora;
     private javax.swing.JButton btnIngresos;
     private javax.swing.JButton btnInsumos;
     private javax.swing.JButton btnNoReparados;
