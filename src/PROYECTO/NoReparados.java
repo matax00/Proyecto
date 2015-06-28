@@ -45,7 +45,9 @@ int x,y;
         jTable1 = new javax.swing.JTable();
         lblNoReparados = new javax.swing.JLabel();
         casa = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        txtCedula = new javax.swing.JTextField();
+        btnBuscar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         FONDO = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -64,33 +66,33 @@ int x,y;
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Tipo", "Marca", "Modelo", "Falla"
+                "Tipo", "Marca", "Modelo", "Falla", "Estado"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -99,8 +101,8 @@ int x,y;
 
         lblNoReparados.setFont(new java.awt.Font("Tempus Sans ITC", 1, 48)); // NOI18N
         lblNoReparados.setForeground(new java.awt.Color(204, 255, 255));
-        lblNoReparados.setText("Equipos No Reparados");
-        jPanel1.add(lblNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 560, 50));
+        lblNoReparados.setText("Estatus Equipos:");
+        jPanel1.add(lblNoReparados, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 380, 50));
 
         casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inicio.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");
@@ -116,14 +118,20 @@ int x,y;
         });
         jPanel1.add(casa, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 480, -1, 90));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/print_64.png"))); // NOI18N
-        jButton1.setToolTipText("Imprimir");
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton1.setFocusPainted(false);
-        jButton1.setFocusable(false);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 480, 90, 70));
+        txtCedula.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel1.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, 190, 30));
+
+        btnBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Buscar.png"))); // NOI18N
+        btnBuscar.setBorderPainted(false);
+        btnBuscar.setContentAreaFilled(false);
+        btnBuscar.setFocusPainted(false);
+        btnBuscar.setFocusable(false);
+        jPanel1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 480, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Ingrese Cedula: ");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 490, 120, 30));
 
         FONDO.setBackground(new java.awt.Color(204, 204, 204));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -211,11 +219,13 @@ int x,y;
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel FONDO;
+    private javax.swing.JButton btnBuscar;
     private javax.swing.JButton casa;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel lblNoReparados;
+    private javax.swing.JTextField txtCedula;
     // End of variables declaration//GEN-END:variables
 }
