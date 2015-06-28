@@ -71,7 +71,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
        
         txtCedulaUsuario.setVisible(false);
         
-        btnAgregarUsuario.setVisible(false);
+       
         btnBuscarUsuario.setVisible(false);
         btnMantenimiento.setVisible(false);
         
@@ -129,7 +129,6 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnAcerca = new javax.swing.JButton();
         btnCerrarSesion = new javax.swing.JButton();
         lblCedulaUsuario = new javax.swing.JLabel();
-        btnAgregarUsuario = new javax.swing.JButton();
         txtCedulaUsuario = new javax.swing.JTextField();
         lblConsultaUsuario = new javax.swing.JLabel();
         Brothernologic = new javax.swing.JLabel();
@@ -558,20 +557,6 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         });
         jPanel2.add(lblCedulaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, 170, 30));
 
-        btnAgregarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Agregar.png"))); // NOI18N
-        btnAgregarUsuario.setToolTipText("Agregar");
-        btnAgregarUsuario.setBorderPainted(false);
-        btnAgregarUsuario.setContentAreaFilled(false);
-        btnAgregarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAgregarUsuario.setFocusPainted(false);
-        btnAgregarUsuario.setFocusable(false);
-        btnAgregarUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarUsuarioActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnAgregarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 60, 60));
-
         txtCedulaUsuario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtCedulaUsuario.setToolTipText("");
         jPanel2.add(txtCedulaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 530, 250, 40));
@@ -743,7 +728,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         lblCedulaUsuario.setVisible(true);
        
         txtCedulaUsuario.setVisible(true);
-        btnAgregarUsuario.setVisible(true);
+   
         btnBuscarUsuario.setVisible(true);
         btnMantenimiento.setVisible(false);
         
@@ -796,7 +781,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
        
         txtCedulaUsuario.setVisible(false);
         
-        btnAgregarUsuario.setVisible(false);
+       
          btnBuscarUsuario.setVisible(false);
          btnMantenimiento.setVisible(false);
        
@@ -849,7 +834,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         
         txtCedulaUsuario.setVisible(false);
        
-        btnAgregarUsuario.setVisible(false);
+      
          btnBuscarUsuario.setVisible(false);
          btnMantenimiento.setVisible(true);
     }//GEN-LAST:event_btnOpcionesActionPerformed
@@ -957,8 +942,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         
         txtCedulaUsuario.setVisible(false);
         
-        btnAgregarUsuario.setVisible(false);
-         btnBuscarUsuario.setVisible(false);
+                btnBuscarUsuario.setVisible(false);
          btnMantenimiento.setVisible(false);
     }//GEN-LAST:event_btnAnalisisActionPerformed
 
@@ -1039,7 +1023,6 @@ lblConsultaUsuario.setVisible(false);
        
         txtCedulaUsuario.setVisible(false);
        
-        btnAgregarUsuario.setVisible(false);
  btnBuscarUsuario.setVisible(false);
 btnMantenimiento.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_btnServiciosActionPerformed
@@ -1048,10 +1031,12 @@ btnMantenimiento.setVisible(false);// TODO add your handling code here:
        
         if(txtCedula.getText().equals("1234")){
           
-        
+        ConsultaCliente cocli=new ConsultaCliente();
+        cocli.setVisible(true);
+        txtCedula.setText("");
         }
         else{
-           
+         txtCedula.setText("");  
            int regis= JOptionPane.showConfirmDialog(null, "Cliente no registrado ¿desea registrarlo?");
                     if(regis==JOptionPane.YES_OPTION){
            
@@ -1123,13 +1108,6 @@ Egresos egr=new Egresos();
     private void lblCedulaUsuarioComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblCedulaUsuarioComponentHidden
         // TODO add your handling code here:
     }//GEN-LAST:event_lblCedulaUsuarioComponentHidden
-
-    private void btnAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarUsuarioActionPerformed
-                AgregarUsuario ag=new AgregarUsuario();
-            ag.setResizable(false);
-            ag.setLocationRelativeTo(null);
-            ag.setVisible(true);       // TODO add your handling code here:
-    }//GEN-LAST:event_btnAgregarUsuarioActionPerformed
 
     private void lblConsultaUsuarioComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblConsultaUsuarioComponentHidden
         // TODO add your handling code here:
@@ -1212,7 +1190,6 @@ Egresos egr=new Egresos();
     private javax.swing.JLabel Nombre;
     private javax.swing.JLabel Warning;
     private javax.swing.JButton btnAcerca;
-    private javax.swing.JButton btnAgregarUsuario;
     private javax.swing.JButton btnAnalisis;
     private javax.swing.JButton btnArchivo;
     private javax.swing.JButton btnAyuda;
