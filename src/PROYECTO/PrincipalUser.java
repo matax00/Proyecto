@@ -246,7 +246,7 @@ public class PrincipalUser extends javax.swing.JFrame {
                 btnBuscarClienteActionPerformed(evt);
             }
         });
-        jPanel2.add(btnBuscarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 150, 60, 60));
+        jPanel2.add(btnBuscarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, 60, 60));
 
         btnComputadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/computadora.png"))); // NOI18N
         btnComputadora.setToolTipText("Computadora");
@@ -295,7 +295,7 @@ public class PrincipalUser extends javax.swing.JFrame {
 
         txtCedula.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtCedula.setToolTipText("");
-        jPanel2.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, 250, 40));
+        jPanel2.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 290, 250, 40));
 
         lblCedula.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblCedula.setForeground(new java.awt.Color(204, 204, 204));
@@ -305,7 +305,7 @@ public class PrincipalUser extends javax.swing.JFrame {
                 lblCedulaComponentHidden(evt);
             }
         });
-        jPanel2.add(lblCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, 170, 30));
+        jPanel2.add(lblCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 170, 30));
 
         btnAcerca.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         btnAcerca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Acercade.png"))); // NOI18N
@@ -436,7 +436,7 @@ public class PrincipalUser extends javax.swing.JFrame {
                 lblConsultaClienteComponentHidden(evt);
             }
         });
-        jPanel2.add(lblConsultaCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 220, 30));
+        jPanel2.add(lblConsultaCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 220, 30));
 
         btnAyuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Ayuda.png"))); // NOI18N
         btnAyuda.setToolTipText("Ayuda");
@@ -854,25 +854,25 @@ try {
 
     private void btnBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarClienteActionPerformed
       
+       
         if(txtCedula.getText().equals("1234")){
-            txtCedula.setText("");
-            ConsultaCliente dc=new ConsultaCliente();
-            dc.setResizable(false);
-            dc.setLocationRelativeTo(null);
-            dc.setVisible(true);
-
+          
+        ConsultaCliente cocli=new ConsultaCliente();
+        cocli.setVisible(true);
+        txtCedula.setText("");
         }
         else{
-            int regis= JOptionPane.showConfirmDialog(null, "Cliente no registrado ¿desea registrarlo?");
-            if(regis==JOptionPane.YES_OPTION){
-
-                txtCedula.setText("");
-                NuevoCliente reg=new NuevoCliente();
-                reg.setLocationRelativeTo(reg);
-                reg.setResizable(false);
-                reg.setVisible(true);
-
-            }}
+         txtCedula.setText("");  
+           int regis= JOptionPane.showConfirmDialog(null, "Cliente no registrado ¿desea registrarlo?");
+                    if(regis==JOptionPane.YES_OPTION){
+           
+             
+         NuevoCliente reg=new NuevoCliente();
+      reg.setLocationRelativeTo(reg);
+       reg.setResizable(false);
+      reg.setVisible(true);
+       
+        }}
     }//GEN-LAST:event_btnBuscarClienteActionPerformed
 
     /**
