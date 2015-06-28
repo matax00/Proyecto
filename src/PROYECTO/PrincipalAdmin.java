@@ -29,7 +29,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         lblCedula.setVisible(false);
         txtCedula.setVisible(false);
         btnBuscarCliente.setVisible(false);
-        btnAgregar.setVisible(false);
+     
         lblServicio.setVisible(false);
         btnComputadora.setVisible(false);
         btnTelefono.setVisible(false);
@@ -50,15 +50,14 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnServicios.setBorderPainted(false);
         btnImpresora.setVisible(false);
         btnOpciones.setBorderPainted(false);
-        txtCodRecibo.setVisible(false);
-        lblCodRecibo.setVisible(false);
+     
        
         
         lblConsultaCliente.setVisible(false);
-        lblConsultaRecibo.setVisible(false);
-        btnBuscarRecibo.setVisible(false);
+       
+  
         lblConsultaCliente.setVisible(false);
-        lblConsultaRecibo.setVisible(false);
+      
        
         btnCerrarSesion.setVisible(false);
         btnAyuda.setVisible(false);
@@ -116,12 +115,8 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         Warning = new javax.swing.JLabel();
         btnNoReparados = new javax.swing.JButton();
         btnInsumos = new javax.swing.JButton();
-        lblConsultaRecibo = new javax.swing.JLabel();
         lblArchivo = new javax.swing.JLabel();
         btnBuscarCliente = new javax.swing.JButton();
-        btnBuscarRecibo = new javax.swing.JButton();
-        lblCodRecibo = new javax.swing.JLabel();
-        txtCodRecibo = new javax.swing.JTextField();
         lblCedula = new javax.swing.JLabel();
         txtCedula = new javax.swing.JTextField();
         lblConsultaCliente = new javax.swing.JLabel();
@@ -140,7 +135,6 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         Brothernologic = new javax.swing.JLabel();
         Bandera = new javax.swing.JLabel();
         btnBuscarUsuario = new javax.swing.JButton();
-        btnAgregar = new javax.swing.JButton();
         btnAnalisis = new javax.swing.JButton();
         Nombre = new javax.swing.JLabel();
         Administrador = new javax.swing.JLabel();
@@ -400,16 +394,6 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         });
         jPanel2.add(btnInsumos, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 130, 120));
 
-        lblConsultaRecibo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblConsultaRecibo.setForeground(new java.awt.Color(204, 204, 204));
-        lblConsultaRecibo.setText("Consulta de Recibo");
-        lblConsultaRecibo.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentHidden(java.awt.event.ComponentEvent evt) {
-                lblConsultaReciboComponentHidden(evt);
-            }
-        });
-        jPanel2.add(lblConsultaRecibo, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 290, 220, 30));
-
         lblArchivo.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
         lblArchivo.setForeground(new java.awt.Color(255, 255, 255));
         lblArchivo.setText("Archivo");
@@ -427,35 +411,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 btnBuscarClienteActionPerformed(evt);
             }
         });
-        jPanel2.add(btnBuscarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, 60, 60));
-
-        btnBuscarRecibo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Buscar.png"))); // NOI18N
-        btnBuscarRecibo.setToolTipText("Buscar");
-        btnBuscarRecibo.setBorderPainted(false);
-        btnBuscarRecibo.setContentAreaFilled(false);
-        btnBuscarRecibo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnBuscarRecibo.setFocusPainted(false);
-        btnBuscarRecibo.setFocusable(false);
-        btnBuscarRecibo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBuscarReciboActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnBuscarRecibo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 370, 60, 60));
-
-        lblCodRecibo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        lblCodRecibo.setForeground(new java.awt.Color(204, 204, 204));
-        lblCodRecibo.setText("Codigo de Recibo");
-        lblCodRecibo.addComponentListener(new java.awt.event.ComponentAdapter() {
-            public void componentHidden(java.awt.event.ComponentEvent evt) {
-                lblCodReciboComponentHidden(evt);
-            }
-        });
-        jPanel2.add(lblCodRecibo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, 170, 30));
-
-        txtCodRecibo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        txtCodRecibo.setToolTipText("");
-        jPanel2.add(txtCodRecibo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 250, 40));
+        jPanel2.add(btnBuscarCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 260, 60, 60));
 
         lblCedula.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblCedula.setForeground(new java.awt.Color(204, 204, 204));
@@ -465,11 +421,11 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 lblCedulaComponentHidden(evt);
             }
         });
-        jPanel2.add(lblCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 120, 170, 30));
+        jPanel2.add(lblCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 170, 30));
 
         txtCedula.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtCedula.setToolTipText("");
-        jPanel2.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 160, 250, 40));
+        jPanel2.add(txtCedula, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, 250, 40));
 
         lblConsultaCliente.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblConsultaCliente.setForeground(new java.awt.Color(204, 204, 204));
@@ -479,7 +435,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 lblConsultaClienteComponentHidden(evt);
             }
         });
-        jPanel2.add(lblConsultaCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 220, 30));
+        jPanel2.add(lblConsultaCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 190, 220, 30));
 
         lblAnalisis.setFont(new java.awt.Font("Tempus Sans ITC", 1, 36)); // NOI18N
         lblAnalisis.setForeground(new java.awt.Color(255, 255, 255));
@@ -600,7 +556,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 lblCedulaUsuarioComponentHidden(evt);
             }
         });
-        jPanel2.add(lblCedulaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, 170, 30));
+        jPanel2.add(lblCedulaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, 170, 30));
 
         btnAgregarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Agregar.png"))); // NOI18N
         btnAgregarUsuario.setToolTipText("Agregar");
@@ -614,11 +570,11 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 btnAgregarUsuarioActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAgregarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 550, 60, 60));
+        jPanel2.add(btnAgregarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 520, 60, 60));
 
         txtCedulaUsuario.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         txtCedulaUsuario.setToolTipText("");
-        jPanel2.add(txtCedulaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, 250, 40));
+        jPanel2.add(txtCedulaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 530, 250, 40));
 
         lblConsultaUsuario.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblConsultaUsuario.setForeground(new java.awt.Color(204, 204, 204));
@@ -628,7 +584,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 lblConsultaUsuarioComponentHidden(evt);
             }
         });
-        jPanel2.add(lblConsultaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 220, 30));
+        jPanel2.add(lblConsultaUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 450, 220, 30));
 
         Brothernologic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Imagen1.png"))); // NOI18N
         jPanel2.add(Brothernologic, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 380, 60));
@@ -648,21 +604,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
                 btnBuscarUsuarioActionPerformed(evt);
             }
         });
-        jPanel2.add(btnBuscarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 550, 60, 60));
-
-        btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Agregar.png"))); // NOI18N
-        btnAgregar.setToolTipText("Agregar");
-        btnAgregar.setBorderPainted(false);
-        btnAgregar.setContentAreaFilled(false);
-        btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnAgregar.setFocusPainted(false);
-        btnAgregar.setFocusable(false);
-        btnAgregar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAgregarActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 150, 60, 60));
+        jPanel2.add(btnBuscarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 520, 60, 60));
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(150, 40, 640, 700);
@@ -765,7 +707,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         lblCedula.setVisible(true);
         txtCedula.setVisible(true);
         btnBuscarCliente.setVisible(true);
-        btnAgregar.setVisible(true);
+  
         lblServicio.setVisible(false);
         btnComputadora.setVisible(false);
         btnTelefono.setVisible(false);
@@ -787,11 +729,9 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnOpciones.setBorderPainted(false);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
-        txtCodRecibo.setVisible(true);
-        lblCodRecibo.setVisible(true);
-        btnBuscarRecibo.setVisible(true);
+
         lblConsultaCliente.setVisible(true);
-        lblConsultaRecibo.setVisible(true);
+     
         btnCerrarSesion.setVisible(false);
         btnAyuda.setVisible(false);
         btnEstatus.setVisible(false);
@@ -818,7 +758,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         txtCedula.setVisible(false);
        
         btnBuscarCliente.setVisible(false);
-        btnAgregar.setVisible(false);
+      
         lblServicio.setVisible(false);
         btnComputadora.setVisible(false);
         btnTelefono.setVisible(false);
@@ -840,13 +780,9 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnOpciones.setBorderPainted(false);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
-        txtCodRecibo.setVisible(false);
-        lblCodRecibo.setVisible(false);
-       
-     
-        btnBuscarRecibo.setVisible(false);
+      
         lblConsultaCliente.setVisible(false);
-        lblConsultaRecibo.setVisible(false);
+      
       
         btnCerrarSesion.setVisible(false);
         btnAyuda.setVisible(false);
@@ -874,7 +810,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         lblCedula.setVisible(false);
         txtCedula.setVisible(false);
         btnBuscarCliente.setVisible(false);
-        btnAgregar.setVisible(false);
+       
         lblServicio.setVisible(false);
         btnComputadora.setVisible(false);
         btnTelefono.setVisible(false);
@@ -896,13 +832,10 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnOpciones.setBorderPainted(true);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
-        txtCodRecibo.setVisible(false);
-        lblCodRecibo.setVisible(false);
         
-        btnBuscarRecibo.setVisible(false);
       
         lblConsultaCliente.setVisible(false);
-        lblConsultaRecibo.setVisible(false);
+       
        
          btnCerrarSesion.setVisible(true);
         btnAyuda.setVisible(true);
@@ -986,7 +919,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
          lblCedula.setVisible(false);
         txtCedula.setVisible(false);
         btnBuscarCliente.setVisible(false);
-        btnAgregar.setVisible(false);
+       
         lblServicio.setVisible(false);
         btnComputadora.setVisible(false);
         btnTelefono.setVisible(false);
@@ -1008,13 +941,9 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnOpciones.setBorderPainted(false);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
-        txtCodRecibo.setVisible(false);
-        lblCodRecibo.setVisible(false);
        
-       
-        btnBuscarRecibo.setVisible(false);
         lblConsultaCliente.setVisible(false);
-        lblConsultaRecibo.setVisible(false);
+    
        
         btnCerrarSesion.setVisible(false);
         btnAyuda.setVisible(false);
@@ -1070,7 +999,7 @@ public class PrincipalAdmin extends javax.swing.JFrame {
       lblCedula.setVisible(false);
         txtCedula.setVisible(false);
         btnBuscarCliente.setVisible(false);
-        btnAgregar.setVisible(false);
+    
         lblServicio.setVisible(true);
         btnComputadora.setVisible(true);
         btnTelefono.setVisible(true);
@@ -1092,13 +1021,11 @@ public class PrincipalAdmin extends javax.swing.JFrame {
         btnOpciones.setBorderPainted(false);
         Bandera.setVisible(false);
         Brothernologic.setVisible(false);
-        txtCodRecibo.setVisible(false);
-        lblCodRecibo.setVisible(false);
-        btnBuscarRecibo.setVisible(false);
+       
         
        
         lblConsultaCliente.setVisible(false);
-        lblConsultaRecibo.setVisible(false);
+     
      
          btnCerrarSesion.setVisible(false);
         btnAyuda.setVisible(false);
@@ -1117,22 +1044,14 @@ lblConsultaUsuario.setVisible(false);
 btnMantenimiento.setVisible(false);// TODO add your handling code here:
     }//GEN-LAST:event_btnServiciosActionPerformed
 
-    private void lblConsultaReciboComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblConsultaReciboComponentHidden
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblConsultaReciboComponentHidden
-
     private void btnBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarClienteActionPerformed
        
         if(txtCedula.getText().equals("1234")){
-            ConsultaCliente dc=new ConsultaCliente();
-            txtCedula.setText("");btnAgregar.setVisible(true);
-            dc.setResizable(false);
-        dc.setLocationRelativeTo(null);
-        dc.setVisible(true);
+          
         
         }
         else{
-            btnAgregar.setVisible(true);txtCedula.setText("");
+           
            int regis= JOptionPane.showConfirmDialog(null, "Cliente no registrado ¿desea registrarlo?");
                     if(regis==JOptionPane.YES_OPTION){
            
@@ -1144,38 +1063,6 @@ btnMantenimiento.setVisible(false);// TODO add your handling code here:
        
         }}
     }//GEN-LAST:event_btnBuscarClienteActionPerformed
-
-    private void btnBuscarReciboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarReciboActionPerformed
-      try{
-          if(txtCodRecibo.getText().equals("001")){
-             Recibo1 re1=new Recibo1();
-             txtCodRecibo.setText("");
-            re1.setLocationRelativeTo(re1);
-            re1.setResizable(false);
-            re1.setVisible(true);
-      
-        }
-        if(txtCodRecibo.getText().equals("002")){
-            Recibo2 re2=new Recibo2();
-             txtCodRecibo.setText("");
-            re2.setLocationRelativeTo(re2);
-            re2.setResizable(false);
-            re2.setVisible(true);
-      
-        }
-      }
-      catch(Exception e){
-          JOptionPane.showMessageDialog(null," Codigo no registrado ");
-           txtCodRecibo.setText("");
-      }
-     
-           
-        
-    }//GEN-LAST:event_btnBuscarReciboActionPerformed
-
-    private void lblCodReciboComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblCodReciboComponentHidden
-        // TODO add your handling code here:
-    }//GEN-LAST:event_lblCodReciboComponentHidden
 
     private void lblCedulaComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_lblCedulaComponentHidden
         // TODO add your handling code here:
@@ -1277,20 +1164,6 @@ Egresos egr=new Egresos();
         man.setVisible(true);
     }//GEN-LAST:event_btnMantenimientoActionPerformed
 
-    private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-
-        NuevoCliente nvo=new NuevoCliente();
-
-        nvo.setResizable(false);
-        nvo.setLocationRelativeTo(null);
-        nvo.setVisible(true);
-
-        
-        txtCedula.setText("");
-       
-        
-    }//GEN-LAST:event_btnAgregarActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -1339,13 +1212,11 @@ Egresos egr=new Egresos();
     private javax.swing.JLabel Nombre;
     private javax.swing.JLabel Warning;
     private javax.swing.JButton btnAcerca;
-    private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnAgregarUsuario;
     private javax.swing.JButton btnAnalisis;
     private javax.swing.JButton btnArchivo;
     private javax.swing.JButton btnAyuda;
     private javax.swing.JButton btnBuscarCliente;
-    private javax.swing.JButton btnBuscarRecibo;
     private javax.swing.JButton btnBuscarUsuario;
     private javax.swing.JButton btnCerrarSesion;
     private javax.swing.JButton btnComputadora;
@@ -1369,15 +1240,12 @@ Egresos egr=new Egresos();
     private javax.swing.JLabel lblArchivo;
     private javax.swing.JLabel lblCedula;
     private javax.swing.JLabel lblCedulaUsuario;
-    private javax.swing.JLabel lblCodRecibo;
     private javax.swing.JLabel lblConsultaCliente;
-    private javax.swing.JLabel lblConsultaRecibo;
     private javax.swing.JLabel lblConsultaUsuario;
     private javax.swing.JLabel lblOpciones;
     private javax.swing.JLabel lblReporte;
     private javax.swing.JLabel lblServicio;
     private javax.swing.JTextField txtCedula;
     private javax.swing.JTextField txtCedulaUsuario;
-    private javax.swing.JTextField txtCodRecibo;
     // End of variables declaration//GEN-END:variables
 }
