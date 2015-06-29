@@ -10,6 +10,13 @@ import java.awt.Image;
 import java.awt.MouseInfo;
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 /**
@@ -35,6 +42,9 @@ Cerrar.setContentAreaFilled(false);
 Cerrar.setBorderPainted(false);
        
     }
+    Conectar cc=new Conectar();
+    Connection con=cc.conectarr();
+    PreparedStatement stm;
     
    int x,y;
    String nombre,clave;
@@ -63,8 +73,8 @@ Cerrar.setBorderPainted(false);
         lblTituloIniciarSesion = new javax.swing.JLabel();
         lblClave = new javax.swing.JLabel();
         btnEntrar = new javax.swing.JButton();
-        pwrContraseña = new javax.swing.JPasswordField();
-        tfieldUsuario = new javax.swing.JTextField();
+        txtPass = new javax.swing.JPasswordField();
+        txtUsu = new javax.swing.JTextField();
         lblUsuario = new javax.swing.JLabel();
         FONDO = new javax.swing.JLabel();
 
@@ -152,30 +162,30 @@ Cerrar.setBorderPainted(false);
         jPanel1.add(btnEntrar);
         btnEntrar.setBounds(80, 230, 220, 70);
 
-        pwrContraseña.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        pwrContraseña.setToolTipText("Ingrese Contraseña");
-        pwrContraseña.addActionListener(new java.awt.event.ActionListener() {
+        txtPass.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txtPass.setToolTipText("Ingrese Contraseña");
+        txtPass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pwrContraseñaActionPerformed(evt);
+                txtPassActionPerformed(evt);
             }
         });
-        pwrContraseña.addKeyListener(new java.awt.event.KeyAdapter() {
+        txtPass.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                pwrContraseñaKeyPressed(evt);
+                txtPassKeyPressed(evt);
             }
         });
-        jPanel1.add(pwrContraseña);
-        pwrContraseña.setBounds(140, 170, 170, 30);
+        jPanel1.add(txtPass);
+        txtPass.setBounds(140, 170, 170, 30);
 
-        tfieldUsuario.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        tfieldUsuario.setToolTipText("Ingrese Usuario");
-        tfieldUsuario.addActionListener(new java.awt.event.ActionListener() {
+        txtUsu.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        txtUsu.setToolTipText("Ingrese Usuario");
+        txtUsu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfieldUsuarioActionPerformed(evt);
+                txtUsuActionPerformed(evt);
             }
         });
-        jPanel1.add(tfieldUsuario);
-        tfieldUsuario.setBounds(140, 110, 170, 30);
+        jPanel1.add(txtUsu);
+        txtUsu.setBounds(140, 110, 170, 30);
 
         lblUsuario.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         lblUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Usuario.png"))); // NOI18N
@@ -232,13 +242,13 @@ Cerrar.setBorderPainted(false);
         y = evt.getY();
     }//GEN-LAST:event_FONDOMousePressed
 
-    private void tfieldUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfieldUsuarioActionPerformed
+    private void txtUsuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_tfieldUsuarioActionPerformed
+    }//GEN-LAST:event_txtUsuActionPerformed
 
-    private void pwrContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwrContraseñaActionPerformed
+    private void txtPassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPassActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_pwrContraseñaActionPerformed
+    }//GEN-LAST:event_txtPassActionPerformed
 
     
     
@@ -256,23 +266,22 @@ Cerrar.setBorderPainted(false);
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
      
-
-        if ((tfieldUsuario.getText().equals("admin"))&& pwrContraseña.getText().equals("admin")){
-
-            PrincipalAdmin pa=new PrincipalAdmin();
-
-            pa.setResizable(false);
-            pa.setLocationRelativeTo(null);
-            pa.setVisible(true);
+        try {
+            stm=con.prepareStatement("select * from usuario where nick= '" + txtUsu.getText() + "' && contraseña='" + txtPass.getText() + "' ");
+            stm.executeQuery();
+            ResultSet rs=stm.executeQuery();
+            if(rs.next()){
+            
+            JOptionPane.showMessageDialog(null,"Conectado");
+            PrincipalAdmin Pa=new PrincipalAdmin();
+            Pa.setVisible(true);
             dispose();
-        }
-        if ((tfieldUsuario.getText().equals("user"))&& pwrContraseña.getText().equals("user")) {
-            PrincipalUser pu=new PrincipalUser();
-
-            pu.setResizable(false);
-            pu.setLocationRelativeTo(null);
-            pu.setVisible(true);
-            dispose();
+            
+            }
+            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(Inicio.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }//GEN-LAST:event_btnEntrarActionPerformed
@@ -290,7 +299,7 @@ Cerrar.setBorderPainted(false);
 
     }//GEN-LAST:event_btnEntrarMouseMoved
 
-    private void pwrContraseñaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_pwrContraseñaKeyPressed
+    private void txtPassKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPassKeyPressed
        
         int enter=evt.getKeyCode();
 
@@ -298,7 +307,7 @@ Cerrar.setBorderPainted(false);
 
          btnEntrar.doClick();
         }
-    }//GEN-LAST:event_pwrContraseñaKeyPressed
+    }//GEN-LAST:event_txtPassKeyPressed
 
     /**
      * @param args the command line arguments
@@ -345,7 +354,7 @@ Cerrar.setBorderPainted(false);
     private javax.swing.JLabel lblClave;
     private javax.swing.JLabel lblTituloIniciarSesion;
     private javax.swing.JLabel lblUsuario;
-    private javax.swing.JPasswordField pwrContraseña;
-    private javax.swing.JTextField tfieldUsuario;
+    private javax.swing.JPasswordField txtPass;
+    private javax.swing.JTextField txtUsu;
     // End of variables declaration//GEN-END:variables
 }
