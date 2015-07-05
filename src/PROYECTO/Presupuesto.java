@@ -22,7 +22,10 @@ public class Presupuesto extends javax.swing.JFrame {
     public Presupuesto() {
         setUndecorated(true);
         initComponents();
+        descripcion.setVisible(false);
+        txtDesc.setVisible(false);
     }
+    
     
 int x,y;
  @Override
@@ -45,20 +48,19 @@ int x,y;
 
         jPanel1 = new javax.swing.JPanel();
         lblPresupuesto = new javax.swing.JLabel();
-        atras = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         btnImprimir = new javax.swing.JButton();
-        jTextField3 = new javax.swing.JTextField();
+        atras = new javax.swing.JButton();
         casa = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        descripcion = new javax.swing.JLabel();
+        Combo = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        txtCantidad = new javax.swing.JTextField();
         btnAgregar = new javax.swing.JButton();
+        txtDesc = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txtFecha = new javax.swing.JFormattedTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         FONDO = new javax.swing.JLabel();
@@ -82,6 +84,15 @@ int x,y;
         jPanel1.add(lblPresupuesto);
         lblPresupuesto.setBounds(10, 10, 430, 50);
 
+        btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Inventario/hola.png"))); // NOI18N
+        btnImprimir.setBorderPainted(false);
+        btnImprimir.setContentAreaFilled(false);
+        btnImprimir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnImprimir.setFocusPainted(false);
+        btnImprimir.setFocusable(false);
+        jPanel1.add(btnImprimir);
+        btnImprimir.setBounds(450, 370, 60, 60);
+
         atras.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Inventario/regresar-icono-6105-48.png"))); // NOI18N
         atras.setBorderPainted(false);
         atras.setContentAreaFilled(false);
@@ -94,34 +105,7 @@ int x,y;
             }
         });
         jPanel1.add(atras);
-        atras.setBounds(560, 520, 60, 50);
-
-        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true));
-        jPanel3.setOpaque(false);
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Fecha");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 50, 40));
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Hora");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, 70, 40));
-        jPanel3.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 80, 110, 20));
-
-        btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Inventario/hola.png"))); // NOI18N
-        btnImprimir.setBorderPainted(false);
-        btnImprimir.setContentAreaFilled(false);
-        btnImprimir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        btnImprimir.setFocusPainted(false);
-        btnImprimir.setFocusable(false);
-        jPanel3.add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 40, 60, 60));
-        jPanel3.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, 110, 20));
-
-        jPanel1.add(jPanel3);
-        jPanel3.setBounds(40, 390, 330, 140);
+        atras.setBounds(520, 370, 60, 50);
 
         casa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/inicio.png"))); // NOI18N
         casa.setToolTipText("Ir Atras");
@@ -136,32 +120,32 @@ int x,y;
             }
         });
         jPanel1.add(casa);
-        casa.setBounds(620, 510, 60, 50);
+        casa.setBounds(600, 370, 60, 50);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true), "Producto y cantidad", javax.swing.border.TitledBorder.RIGHT, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 12), new java.awt.Color(255, 255, 255))); // NOI18N
         jPanel2.setOpaque(false);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Selecione producto");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 160, 40));
+        descripcion.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        descripcion.setForeground(new java.awt.Color(255, 255, 255));
+        descripcion.setText("Descripción:");
+        jPanel2.add(descripcion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 160, 40));
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "camara", "teclado", "raton", "flex", "formateo", "mantenimiento" }));
-        jComboBox1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        Combo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        Combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "seleccione", "camara", "teclado", "raton", "flex", "formateo", "mantenimiento", "otro" }));
+        Combo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Combo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                ComboActionPerformed(evt);
             }
         });
-        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 190, 30));
+        jPanel2.add(Combo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 190, 30));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Cantidad");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 70, 40));
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 90, 30));
+        jLabel1.setText("Cantidad:");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 110, 40));
+        jPanel2.add(txtCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 90, 30));
 
         btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/Agregar.png"))); // NOI18N
         btnAgregar.setBorderPainted(false);
@@ -169,10 +153,26 @@ int x,y;
         btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnAgregar.setFocusPainted(false);
         btnAgregar.setFocusable(false);
-        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 110, 60, 50));
+        jPanel2.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 60, 50));
+
+        txtDesc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jPanel2.add(txtDesc, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 120, 150, 30));
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Selecione producto");
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 160, 40));
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 3, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Fecha:");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 70, 40));
+
+        txtFecha.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.SHORT))));
+        jPanel2.add(txtFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 90, 30));
 
         jPanel1.add(jPanel2);
-        jPanel2.setBounds(40, 110, 330, 240);
+        jPanel2.setBounds(40, 110, 330, 320);
 
         jTable1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 255, 255), 2, true));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -215,7 +215,7 @@ int x,y;
         jScrollPane1.setViewportView(jTable1);
 
         jPanel1.add(jScrollPane1);
-        jScrollPane1.setBounds(400, 120, 270, 350);
+        jScrollPane1.setBounds(400, 120, 270, 220);
 
         FONDO.setBackground(new java.awt.Color(204, 204, 204));
         FONDO.setIcon(new javax.swing.ImageIcon(getClass().getResource("/iconos/20FB742C2.jpg"))); // NOI18N
@@ -236,27 +236,17 @@ int x,y;
             }
         });
         jPanel1.add(FONDO);
-        FONDO.setBounds(0, 0, 700, 580);
+        FONDO.setBounds(-50, -50, 740, 500);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 700, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 690, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 452, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -286,9 +276,16 @@ int x,y;
         // TODO add your handling code here:
     }//GEN-LAST:event_jPanel1MouseEntered
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    private void ComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ComboActionPerformed
+      if (Combo.getSelectedItem().equals("otro")){
+      descripcion.setVisible(true);
+      txtDesc.setVisible(true);
+      }
+      else {
+      descripcion.setVisible(false);
+      txtDesc.setVisible(false); 
+      }
+    }//GEN-LAST:event_ComboActionPerformed
 
     private void atrasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_atrasActionPerformed
             
@@ -331,24 +328,23 @@ int x,y;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox Combo;
     private javax.swing.JLabel FONDO;
     private javax.swing.JButton atras;
     private javax.swing.JButton btnAgregar;
     private javax.swing.JButton btnImprimir;
     private javax.swing.JButton casa;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JLabel descripcion;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JLabel lblPresupuesto;
+    private javax.swing.JTextField txtCantidad;
+    private javax.swing.JTextField txtDesc;
+    private javax.swing.JFormattedTextField txtFecha;
     // End of variables declaration//GEN-END:variables
 }
