@@ -25,7 +25,7 @@ public class PrincipalUser extends javax.swing.JFrame {
      */
     public PrincipalUser() {this.setUndecorated(true);
         initComponents();
-        lblCedula.setVisible(false);
+        lblCedula.setVisible(false); 
         txtCedula.setVisible(false);
         
         lblServicio.setVisible(false);
